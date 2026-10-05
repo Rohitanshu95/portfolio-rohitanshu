@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Rohitanshu Dhar | AI Engineer Portfolio</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#002d40", "surface-tint": "#c0c1ff", "background": "#0f131d", "on-secondary-fixed-variant": "#004e5c", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#004c69", "surface-variant": "#313540", "primary-container": "#8083ff", "on-tertiary-fixed": "#001e2c", "primary-fixed": "#e1e0ff", "on-surface-variant": "#c7c4d7", "inverse-on-surface": "#2c303b", "primary-fixed-dim": "#c0c1ff", "inverse-primary": "#494bd6", "primary": "#c0c1ff", "secondary": "#4cd7f6", "surface-dim": "#0f131d", "surface-container-high": "#262a35", "on-tertiary": "#00354a", "surface-container-lowest": "#0a0e18", "on-surface": "#dfe2f1", "on-secondary": "#003640", "surface-container": "#1c1f2a", "on-primary-fixed": "#07006c", "inverse-surface": "#dfe2f1", "on-secondary-fixed": "#001f26", "on-primary-container": "#0d0096", "on-error-container": "#ffdad6", "secondary-fixed-dim": "#4cd7f6", "surface-container-low": "#171b26", "tertiary": "#7bd0ff", "surface-container-highest": "#313540", "outline": "#908fa0", "outline-variant": "#464554", "on-primary": "#1000a9", "tertiary-container": "#009bd1", "tertiary-fixed": "#c4e7ff", "error-container": "#93000a", "on-secondary-container": "#00424e", "secondary-container": "#03b5d3", "on-error": "#690005", "on-background": "#dfe2f1", "tertiary-fixed-dim": "#7bd0ff", "surface-bright": "#353944", "on-primary-fixed-variant": "#2f2ebe", "surface": "#0f131d", "secondary-fixed": "#acedff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-sm": "1rem", "space-md": "1rem", "space-xl": "2.5rem", "gutter-lg": "2rem", "margin": "1.5rem", "margin-lg": "3rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin-sm": "1rem" }, "fontFamily": { "headline-sm": [ "Space Grotesk" ], "display-mobile": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "label-lg": [ "JetBrains Mono" ], "headline-lg": [ "Space Grotesk" ], "label-sm": [ "JetBrains Mono" ], "body-sm": [ "Inter" ], "label-md": [ "JetBrains Mono" ], "body-md": [ "Inter" ], "display": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ] }, "fontSize": { "headline-sm": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "display-mobile": [ "2.5rem", { "lineHeight": "3rem", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "headline-lg-mobile": [ "2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-lg": [ "0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg": [ "2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "label-sm": [ "0.625rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "500" } ], "body-sm": [ "0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "400" } ], "label-md": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-md": [ "1rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "400" } ], "display": [ "4rem", { "lineHeight": "4.5rem", "letterSpacing": "-0.04em", "fontWeight": "700" } ], "headline-md": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><div class="h-20 max-w-[1280px] mx-auto px-gutter-sm lg:px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm sm:gap-space-md"><a class="flex items-center gap-space-sm group" data-path="about" href="#"><img alt="RD Monogram Logo" class="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1UaJPoGFhBGudmb_fhjuyJ8s-WWN8MD6uvKhoNZ40aRaUIGjHJi78-iuGOR_NBz-E4tkepUvb7CaYfmlP4xhtYrHz2QBnsvpIexGBi6Z1knadcgH2lLifvLx1K7yYJuyJN7Xdmgp3RJeJ8J-QPFhrE-pQiJZALVP7sUykJut4aNmTrJ0mFl-abUMcknNr8nqAX0Sn8PTprA49MdkZU1pmfUH7z7hUgqpgP91oHfCJ0imiQH53R0d3WpRvE-"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none group-hover:text-primary transition-colors">Rohitanshu Dhar</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase mt-0.5">AI Engineer</span></div></a><div class="hidden sm:inline-flex items-center gap-1.5 px-space-sm py-space-xs rounded-full bg-surface-container-high/80 border border-outline-variant/30 ml-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">RAG &amp; Agents</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-medium rounded-lg shadow-[0_0_12px_rgba(192,193,255,0.15)]"><a aria-current="page" class="px-space-md py-space-xs transition-all bg-surface-container-high text-primary font-medium rounded-lg shadow-[0_0_12px_rgba(192,193,255,0.15)]" data-path="about" href="#">About</a><a class="font-label-md text-label-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 transition-all" data-path="skills" href="#">Skills</a><a class="font-label-md text-label-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 transition-all" data-path="experience" href="#">Experience</a><a class="font-label-md text-label-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 transition-all" data-path="projects" href="#">Projects</a><a class="font-label-md text-label-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 transition-all" data-path="achievements" href="#">Achievements</a><a class="font-label-md text-label-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 transition-all" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><a class="hidden md:inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-high border border-primary/40 text-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container hover:border-transparent transition-all shadow-[0_0_16px_rgba(192,193,255,0.15)]" href="#download-resume"><span class="material-symbols-outlined text-[18px]">download</span><span>Download Resume</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-inner"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Toggle Mobile Menu" class="xl:hidden p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high focus:outline-none transition-colors" id="mobile-nav-toggle"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div><div class="hidden xl:hidden bg-surface-container-low/95 backdrop-blur-xl border-t border-outline-variant/30 px-gutter-sm py-space-md" id="mobile-nav-drawer"><nav class="flex flex-col gap-space-xs mb-space-md" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg"><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-medium rounded-lg" data-path="about" href="#">About</a><a class="font-label-md text-label-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="skills" href="#">Skills</a><a class="font-label-md text-label-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="experience" href="#">Experience</a><a class="font-label-md text-label-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="projects" href="#">Projects</a><a class="font-label-md text-label-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="achievements" href="#">Achievements</a><a class="font-label-md text-label-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="contact" href="#">Contact</a></nav><a class="flex md:hidden items-center justify-center gap-space-xs w-full px-space-md py-space-sm rounded-lg bg-surface-container-high border border-primary/40 text-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-all" href="#download-resume"><span class="material-symbols-outlined text-[18px]">download</span><span>Download Resume</span></a></div></header><main class="w-full pt-20 bg-surface flex-grow"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Field -->
+<div class="relative w-full max-w-[1280px] mx-auto px-gutter-sm lg:px-gutter-lg overflow-hidden">
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-48 right-10 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- ==================== 1. HERO SECTION ==================== -->
+<section class="relative pt-space-xl pb-space-xl lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center" id="hero">
+<!-- Left Column: Copy & Actions -->
+<div class="lg:col-span-7 flex flex-col items-start gap-space-md z-10">
+<!-- Live Status Pill -->
+<div class="inline-flex items-center gap-2 px-space-md py-1.5 rounded-full bg-surface-container-high/90 shadow-sm">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Available for AI Engineering Roles</span>
+</div>
+<!-- Headline -->
+<h1 class="font-headline-lg text-headline-lg lg:text-display text-on-surface leading-[1.08] tracking-tight">
+          Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">Rohitanshu Dhar</span>
+</h1>
+<!-- Subheadline -->
+<h2 class="font-headline-md text-headline-md text-on-surface-variant font-medium">
+          AI Engineer building production-ready GenAI, RAG &amp; AI agent applications
+        </h2>
+<!-- Quick Summary Note -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+          Specializing in context-aware retrieval pipelines, autonomous multi-agent systems, and low-latency LLM serving with deterministic benchmarks.
+        </p>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm w-full sm:w-auto">
+<a class="inline-flex items-center justify-center gap-2 px-space-lg py-3 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-xl hover:bg-primary-container hover:text-on-primary-container transition-all group" href="#projects">
+<span>View Projects</span>
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-space-lg py-3 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container-highest hover:text-secondary transition-all" href="#contact">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Contact Me</span>
+</a>
+</div>
+<!-- Social & Activity Strip -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-md text-on-surface-variant">
+<a class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container hover:text-secondary transition-all font-label-sm text-label-sm shadow-sm" href="https://github.com/Rohitanshu95" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>github.com/Rohitanshu95</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container hover:text-secondary transition-all font-label-sm text-label-sm shadow-sm" href="https://linkedin.com/in/rohitanshu-dhar" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span>linkedin.com/in/rohitanshu-dhar</span>
+</a>
+<div class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">near_me</span>
+<span>Bhubaneswar, Odisha</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Profile & Floating Tech Badges -->
+<div class="lg:col-span-5 relative flex items-center justify-center pt-space-lg lg:pt-0">
+<!-- Subtle Glow Halo behind photo -->
+<div class="absolute w-72 h-72 sm:w-80 sm:h-80 rounded-full bg-gradient-to-tr from-primary/30 to-secondary/30 blur-2xl pointer-events-none"></div>
+<!-- Photo Squircle Frame -->
+<div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl p-1 bg-gradient-to-br from-primary via-secondary to-tertiary shadow-2xl">
+<div class="w-full h-full rounded-[22px] overflow-hidden bg-surface-container-lowest relative group">
+<img alt="Rohitanshu Dhar - AI Engineer" class="w-full h-full object-cover object-center filter grayscale-[10%] contrast-[1.05] transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqoaGGAnziDEbngJ-LmfICvomHyTXXqiJgsif7Fl5AQV02w5pNfqzERGEosM86fHKYDtT0WZ6TrQOWKLCZcCBxMNXzOWSMax-CA3Khqj3h8RPnwr6e0nrwnOpdDcUpGM7w3zZxoDWlMXl1cyrPLrRJaTsHIJz8epNlARRoa0kQuUQCNWp2nkSNNqPDAHkgtwjDtvMu_OnDLjBA2ENfXtU9Yv5j0_HnQctHfYse7y8SToIu5IaK_UWCkg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent opacity-60"></div>
+</div>
+</div>
+<!-- Floating Badge 1: Top-Left (Python) -->
+<div class="absolute -top-4 -left-4 sm:top-2 sm:left-4 z-20 flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-high/90 backdrop-blur-md shadow-lg transition-transform hover:-translate-y-1">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface">Python 3.12</span>
+</div>
+<!-- Floating Badge 2: Top-Right (FastAPI) -->
+<div class="absolute -top-4 -right-4 sm:top-4 sm:right-2 z-20 flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-high/90 backdrop-blur-md shadow-lg transition-transform hover:-translate-y-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">bolt</span>
+<span class="font-label-md text-label-md text-on-surface">FastAPI Async</span>
+</div>
+<!-- Floating Badge 3: Bottom-Left (LangGraph) -->
+<div class="absolute -bottom-4 -left-3 sm:bottom-6 sm:left-2 z-20 flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-high/90 backdrop-blur-md shadow-lg transition-transform hover:-translate-y-1">
+<span class="material-symbols-outlined text-primary text-[16px]">account_tree</span>
+<span class="font-label-md text-label-md text-on-surface">LangGraph Agents</span>
+</div>
+<!-- Floating Badge 4: Bottom-Right (RAG Pipelines) -->
+<div class="absolute -bottom-5 -right-3 sm:bottom-4 sm:right-4 z-20 flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-high/90 backdrop-blur-md shadow-lg transition-transform hover:-translate-y-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]">database</span>
+<span class="font-label-md text-label-md text-on-surface">Vector RAG</span>
+</div>
+</div>
+</section>
+<!-- ==================== 2. ABOUT SECTION ==================== -->
+<section class="py-space-xl relative" id="about">
+<div class="flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md tracking-wider uppercase">
+<span class="h-1.5 w-6 rounded bg-secondary"></span>
+<span>About Me</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">
+            Engineering Intelligence at Scale
+          </h3>
+</div>
+<!-- Bio Narrative & Metrics Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<div class="lg:col-span-7 flex flex-col justify-between p-space-lg rounded-2xl bg-surface-container-low shadow-sm">
+<div class="space-y-space-md">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                AI Engineer with 1+ year of hands-on experience in Python, FastAPI, React, and Generative AI, building scalable AI apps with LLMs, RAG, vector databases, prompt engineering, and autonomous agents.
+              </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Currently pursuing B.Tech in Computer Science and Engineering from GIET, Bhubaneswar (2022–2026). My engineering philosophy centers on deterministic evaluation over vibecoding: systematically driving down hallucination rates, optimizing TTFT (Time to First Token), and implementing reliable multi-agent orchestration loops for mission-critical client workloads.
+              </p>
+</div>
+<!-- Inline Micro Metric Bar -->
+<div class="pt-space-lg mt-space-md flex flex-wrap items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-secondary">verified</span> Low-Latency Serving</span>
+<span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-primary">analytics</span> Deterministic Benchmarking</span>
+<span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-tertiary">hub</span> Multi-Agent Graph Workflows</span>
+</div>
+</div>
+<!-- 3 Stat Cards Bento -->
+<div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-space-md">
+<!-- Stat 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-high/70 backdrop-blur-sm flex items-center justify-between shadow-sm hover:bg-surface-container-highest transition-all group">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Production Experience</span>
+<span class="font-headline-lg text-headline-lg text-on-surface">1+ Years</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">End-to-end GenAI &amp; fullstack apps</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[28px]">terminal</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-high/70 backdrop-blur-sm flex items-center justify-between shadow-sm hover:bg-surface-container-highest transition-all group">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Commercial Engagement</span>
+<span class="font-headline-lg text-headline-lg text-on-surface">4</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Internships &amp; delivered client solutions</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">work_history</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-high/70 backdrop-blur-sm flex items-center justify-between shadow-sm hover:bg-surface-container-highest transition-all group">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Competitive Track Record</span>
+<span class="font-headline-lg text-headline-lg text-on-surface">3</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Hackathon podiums &amp; fast prototyping</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-tertiary group-hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[28px]">emoji_events</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 3. SKILLS SECTION ==================== -->
+<section class="py-space-xl relative" id="skills">
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md tracking-wider uppercase">
+<span class="h-1.5 w-6 rounded bg-secondary"></span>
+<span>Technical Arsenal</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">
+            Skills &amp; Technologies
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            A comprehensive suite of modern neural libraries, deployment runtimes, distributed databases, and developer tooling.
+          </p>
+</div>
+<!-- 5 Category Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md items-start">
+<!-- 1. Languages -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-space-md hover:bg-surface-container transition-all">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">code</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Core Languages</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Python
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span> SQL
+              </span>
+</div>
+</div>
+<!-- 2. AI/ML & GenAI (Spans 2 columns on lg) -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-space-md hover:bg-surface-container transition-all lg:col-span-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">psychology</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">AI/ML &amp; Generative AI</h4>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-secondary">Specialization</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Machine Learning
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Deep Learning
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> NLP
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Computer Vision
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> LLMs
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> RAG Pipelines
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Prompt Engineering
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Embeddings
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Vector Databases
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> AI Agents
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Tool Calling
+              </span>
+</div>
+</div>
+<!-- 3. Frameworks & APIs -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-space-md hover:bg-surface-container transition-all">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">api</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Frameworks &amp; APIs</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">FastAPI</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">LangGraph</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">OpenAI API</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">Gemini API</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">Ollama</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">REST APIs</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">React</span>
+</div>
+</div>
+<!-- 4. Databases & Storage -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-space-md hover:bg-surface-container transition-all">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">database</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Databases &amp; Storage</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">MySQL</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">PostgreSQL</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">MongoDB</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">SQLite</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">Redis</span>
+</div>
+</div>
+<!-- 5. Tools & DevOps -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-space-md hover:bg-surface-container transition-all">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[24px]">tune</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Tools &amp; DevOps</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">Git</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">GitHub</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">Docker</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">Linux</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">Postman</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">VS Code</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">Jupyter</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">Colab</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm">Kaggle</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 4. EXPERIENCE SECTION ==================== -->
+<section class="py-space-xl relative" id="experience">
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md tracking-wider uppercase">
+<span class="h-1.5 w-6 rounded bg-secondary"></span>
+<span>Work History</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">
+            Professional Experience
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            A chronological timeline of production deployments, enterprise engineering, and AI consulting roles.
+          </p>
+</div>
+<!-- Vertical Timeline Container -->
+<div class="relative pl-6 sm:pl-8 flex flex-col gap-space-lg">
+<!-- Continuous Ambient Timeline Spine -->
+<div class="absolute left-2.5 sm:left-3.5 top-3 bottom-3 w-0.5 bg-gradient-to-b from-secondary via-primary to-surface-variant"></div>
+<!-- Item 1: E Square System -->
+<div class="relative flex flex-col gap-space-sm p-space-lg rounded-2xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-all">
+<!-- Node Marker -->
+<div class="absolute -left-[30px] sm:-left-[38px] top-6 w-4 h-4 rounded-full bg-secondary shadow-[0_0_12px_rgba(76,215,246,0.8)]"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">AI &amp; ML Intern</h4>
+<p class="font-body-md text-body-md text-secondary">E Square System &amp; Technologies Pvt Ltd</p>
+</div>
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant self-start sm:self-auto">
+                Feb 2026 - Present • Onsite
+              </span>
+</div>
+<ul class="space-y-2 mt- space-xs text-on-surface-variant font-body-md text-body-md list-disc list-inside">
+<li>Built production AI apps with FastAPI, OpenAI, Gemini, RAG, LangGraph, and vector DBs, covering multilingual conversational AI, recommendations, document analysis, and data extraction.</li>
+<li>Engineered context-aware retrieval and autonomous agent pipelines for tourism and document intelligence apps.</li>
+<li>Designed robust backend APIs with FastAPI, MongoDB, Redis, and Docker, including LLM-based document analysis for automated PQ, TQ, and FQ tender evaluation.</li>
+</ul>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-secondary">FastAPI</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-secondary">OpenAI</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-secondary">Gemini</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-secondary">LangGraph</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-secondary">RAG</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-secondary">Redis</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-secondary">Docker</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-secondary">Vector DBs</span>
+</div>
+</div>
+<!-- Item 2: Quotus Software -->
+<div class="relative flex flex-col gap-space-sm p-space-lg rounded-2xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-all">
+<!-- Node Marker -->
+<div class="absolute -left-[30px] sm:-left-[38px] top-6 w-4 h-4 rounded-full bg-primary shadow-[0_0_12px_rgba(192,193,255,0.8)]"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Software Developer Intern</h4>
+<p class="font-body-md text-body-md text-primary">Quotus Software Solution Pvt. Ltd.</p>
+</div>
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant self-start sm:self-auto">
+                Jan 2026 • Onsite
+              </span>
+</div>
+<ul class="space-y-2 mt-space-xs text-on-surface-variant font-body-md text-body-md list-disc list-inside">
+<li>Built an SLM-powered hotel chatbot using Llama 2B and Ollama for guest queries, room services, instant reservations, and bookings.</li>
+<li>Engineered FastAPI backends and optimized local model deployment for low-latency, cost-effective inference pipelines without external cloud costs.</li>
+</ul>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-primary">Llama 2B</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-primary">Ollama</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-primary">FastAPI</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-primary">SLM</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-primary">On-Premise AI</span>
+</div>
+</div>
+<!-- Item 3: Freelance AI Developer -->
+<div class="relative flex flex-col gap-space-sm p-space-lg rounded-2xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-all">
+<!-- Node Marker -->
+<div class="absolute -left-[30px] sm:-left-[38px] top-6 w-4 h-4 rounded-full bg-tertiary shadow-[0_0_12px_rgba(123,208,255,0.8)]"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Freelance AI Developer</h4>
+<p class="font-body-md text-body-md text-tertiary">Direct Enterprise Client Engagements</p>
+</div>
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant self-start sm:self-auto">
+                Jul 2025 - Jan 2026 • Hybrid
+              </span>
+</div>
+<ul class="space-y-2 mt-space-xs text-on-surface-variant font-body-md text-body-md list-disc list-inside">
+<li>Architected an AI-powered OD Survey solution for Arkitechno Consultants India Pvt. Ltd. to automate survey categorization and spatial trend identification.</li>
+<li>Delivered an AI-powered Smart Attendance System for IDCO, Bhubaneswar using real-time edge processing and biometric facial verification.</li>
+</ul>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-tertiary">Computer Vision</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-tertiary">Survey Automation</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-tertiary">Fast Prototyping</span>
+</div>
+</div>
+<!-- Item 4: Infotact Solutions -->
+<div class="relative flex flex-col gap-space-sm p-space-lg rounded-2xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-all">
+<!-- Node Marker -->
+<div class="absolute -left-[30px] sm:-left-[38px] top-6 w-4 h-4 rounded-full bg-surface-variant"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Data Analytics Intern</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Infotact Solutions</p>
+</div>
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant self-start sm:self-auto">
+                May - Jul 2025 • Remote
+              </span>
+</div>
+<ul class="space-y-2 mt-space-xs text-on-surface-variant font-body-md text-body-md list-disc list-inside">
+<li>Conducted in-depth retail sales analysis on the Blinkit dataset to isolate drop-off points and channel demand surges.</li>
+<li>Engineered interactive Power BI and Excel dashboards, and authored a Python-based customer RFM segmentation model using Matplotlib.</li>
+</ul>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant">Python</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant">Power BI</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant">Matplotlib</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant">Data Segmentation</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant">SQL</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 5. PROJECTS SECTION ==================== -->
+<section class="py-space-xl relative" id="projects">
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md tracking-wider uppercase">
+<span class="h-1.5 w-6 rounded bg-secondary"></span>
+<span>Featured Work</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">
+            Production &amp; Autonomous AI Systems
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Selected engineering builds spanning context-rich agent loops, document evaluation engines, and edge-optimized local intelligence.
+          </p>
+</div>
+<!-- 6 Projects Responsive Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Project 1: Odisha Tourism Chatbot -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-secondary">RAG &amp; Agents</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">explore</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">Odisha Tourism Chatbot</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Multilingual RAG conversational assistant providing personalized destination recommendations, historical context, and itinerary planning.
+              </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">FastAPI</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">LangGraph</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Gemini</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Vector DB</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">React</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm">
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high text-on-surface hover:text-secondary hover:bg-surface-container-highest transition-all font-label-sm text-label-sm shadow-sm" href="https://github.com/Rohitanshu95" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>GitHub</span>
+</a>
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all font-label-sm text-label-sm shadow-sm" href="#contact">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>Live Demo</span>
+</a>
+</div>
+</div>
+<!-- Project 2: TenderIntel -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-primary">LLM Document AI</span>
+<span class="material-symbols-outlined text-primary text-[20px]">description</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">TenderIntel - AI Tender Evaluation</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Enterprise LLM-based PQ/TQ/FQ scoring and ranking engine for automated compliance and comprehensive bid assessment.
+              </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">FastAPI</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">OpenAI</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">RAG</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">MongoDB</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Docker</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm">
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high text-on-surface hover:text-primary hover:bg-surface-container-highest transition-all font-label-sm text-label-sm shadow-sm" href="https://github.com/Rohitanshu95" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>GitHub</span>
+</a>
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all font-label-sm text-label-sm shadow-sm" href="#contact">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>Live Demo</span>
+</a>
+</div>
+</div>
+<!-- Project 3: Hotel Assistant Chatbot -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-tertiary">Local SLM</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">room_service</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-tertiary transition-colors">Hotel Assistant Chatbot</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Lightweight SLM chatbot leveraging Llama 2B and Ollama for guest queries, room services, and instant reservations with near-zero latency.
+              </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Llama 2B</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Ollama</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">FastAPI</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Python</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm">
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high text-on-surface hover:text-tertiary hover:bg-surface-container-highest transition-all font-label-sm text-label-sm shadow-sm" href="https://github.com/Rohitanshu95" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>GitHub</span>
+</a>
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all font-label-sm text-label-sm shadow-sm" href="#contact">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>Live Demo</span>
+</a>
+</div>
+</div>
+<!-- Project 4: OD Survey AI Solution -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-secondary">Analytics &amp; NLP</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">alt_route</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">OD Survey AI Solution</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                AI survey automation and insight generation system developed for Arkitechno Consultants India Pvt. Ltd.
+              </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Python</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">NLP</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Pandas</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Streamlit</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm">
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high text-on-surface hover:text-secondary hover:bg-surface-container-highest transition-all font-label-sm text-label-sm shadow-sm" href="https://github.com/Rohitanshu95" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>GitHub</span>
+</a>
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all font-label-sm text-label-sm shadow-sm" href="#contact">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>Live Demo</span>
+</a>
+</div>
+</div>
+<!-- Project 5: Smart Attendance System -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-primary">Computer Vision</span>
+<span class="material-symbols-outlined text-primary text-[20px]">face</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Smart Attendance System</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Automated tracking and real-time monitoring platform built for IDCO, Bhubaneswar using facial recognition and edge processing.
+              </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Computer Vision</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">OpenCV</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">FastAPI</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">SQLite</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm">
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high text-on-surface hover:text-primary hover:bg-surface-container-highest transition-all font-label-sm text-label-sm shadow-sm" href="https://github.com/Rohitanshu95" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>GitHub</span>
+</a>
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all font-label-sm text-label-sm shadow-sm" href="#contact">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>Live Demo</span>
+</a>
+</div>
+</div>
+<!-- Project 6: Sales & Customer Segmentation -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-tertiary">Data Science</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">insights</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-tertiary transition-colors">Customer Segmentation Hub</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                End-to-end exploratory analysis and RFM customer segmentation engine with interactive visual reporting.
+              </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Python</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Matplotlib</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Power BI</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">SQL</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm">
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high text-on-surface hover:text-tertiary hover:bg-surface-container-highest transition-all font-label-sm text-label-sm shadow-sm" href="https://github.com/Rohitanshu95" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>GitHub</span>
+</a>
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all font-label-sm text-label-sm shadow-sm" href="#contact">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>Live Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 6. ACHIEVEMENTS & CERTIFICATIONS ==================== -->
+<section class="py-space-xl relative" id="achievements">
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md tracking-wider uppercase">
+<span class="h-1.5 w-6 rounded bg-secondary"></span>
+<span>Honors &amp; Recognition</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">
+            Hackathons &amp; Credentials
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Demonstrated rapid prototyping under competitive pressure and validated engineering foundations.
+          </p>
+</div>
+<!-- 4 Trophy Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Award 1 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all group">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block font-semibold">1st Place • Winner</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">GIET HackFest 2025</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Championed first prize for best end-to-end production architecture.</p>
+</div>
+</div>
+<!-- Award 2 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all group">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider block font-semibold">Runner-Up</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Festronix 2025</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">AI &amp; ML Competition podium for low-latency neural pipeline.</p>
+</div>
+</div>
+<!-- Award 3 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all group">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider block font-semibold">2nd Runner-Up</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Smart India Hackathon</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Internal selection (2024-25) for national-scale civic technology prototype.</p>
+</div>
+</div>
+<!-- Award 4 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all group">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">rewarded_ads</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block font-semibold">Runner-Up</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Innovatex 4.0</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">GIET Baniatangi flagship hackathon for autonomous agent software.</p>
+</div>
+</div>
+</div>
+<!-- Certifications Strip -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">verified</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Professional Certifications</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validated domain competencies &amp; algorithmic expertise</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-space-sm">
+<div class="px-space-md py-2 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-2 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Python &amp; Data Science (Dynamic System)</span>
+</div>
+<div class="px-space-md py-2 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-2 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>SQL Basic &amp; Advanced (HackerRank)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 7. EDUCATION SECTION ==================== -->
+<section class="py-space-xl relative" id="education">
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md tracking-wider uppercase">
+<span class="h-1.5 w-6 rounded bg-secondary"></span>
+<span>Academic Background</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">
+            Formal Education
+          </h3>
+</div>
+<!-- High-Polish Compact Education Panel -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-secondary shrink-0 mt-1">
+<span class="material-symbols-outlined text-[32px]">school</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+                Bachelor of Technology (B.Tech) in Computer Science and Engineering
+              </h4>
+<p class="font-body-md text-body-md text-secondary">
+                GIET, Bhubaneswar (Affiliated to BPUT)
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1 max-w-xl">
+                Core coursework: Artificial Intelligence, Distributed Systems, Data Structures &amp; Algorithms, Machine Learning, Database Management Systems.
+              </p>
+</div>
+</div>
+<div class="flex flex-col items-start md:items-end gap-1 shrink-0 self-stretch md:self-auto justify-center bg-surface-container-high md:bg-transparent p-space-md md:p-0 rounded-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Enrolled Cohort</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">2022 – 2026</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bhubaneswar, Odisha</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 8. CONTACT SECTION ==================== -->
+<section class="py-space-xl pb-28 relative" id="contact">
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md tracking-wider uppercase">
+<span class="h-1.5 w-6 rounded bg-secondary"></span>
+<span>Get In Touch</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">
+            Let's build something together
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Open for full-time AI Engineer opportunities, high-impact enterprise contracts, and cutting-edge GenAI architecture collaborations.
+          </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Direct Contact & Social Cards -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Email Card -->
+<a class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex items-center justify-between hover:bg-surface-container transition-all group" href="mailto:rohitanshudhar07@gmail.com">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">mail</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Email Directly</span>
+<span class="font-label-lg text-label-lg text-on-surface group-hover:text-secondary transition-colors">rohitanshudhar07@gmail.com</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary group-hover:translate-x-1 transition-all text-[20px]">arrow_forward</span>
+</a>
+<!-- Phone Card -->
+<a class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex items-center justify-between hover:bg-surface-container transition-all group" href="tel:+918144598272">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">call</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Direct Phone</span>
+<span class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors">+91 8144598272</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary group-hover:translate-x-1 transition-all text-[20px]">arrow_forward</span>
+</a>
+<!-- Location Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">location_on</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Current Location</span>
+<span class="font-body-md text-body-md text-on-surface">Bhubaneswar, Odisha, India</span>
+</div>
+</div>
+<!-- Social Links Strip -->
+<div class="pt-space-xs flex items-center gap-space-md">
+<a class="flex-1 p-space-md rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center gap-2 hover:bg-surface-container-highest hover:text-secondary transition-all font-label-md text-label-md shadow-sm" href="https://github.com/Rohitanshu95" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>GitHub Profile</span>
+</a>
+<a class="flex-1 p-space-md rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center gap-2 hover:bg-surface-container-highest hover:text-primary transition-all font-label-md text-label-md shadow-sm" href="https://linkedin.com/in/rohitanshu-dhar" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span>LinkedIn Profile</span>
+</a>
+</div>
+</div>
+<!-- Right Column: Interactive Dark Glass Contact Form -->
+<div class="lg:col-span-7 p-space-lg sm:p-8 rounded-2xl bg-surface-container-low shadow-sm">
+<form class="flex flex-col gap-space-md" id="contact-form" onsubmit="event.preventDefault(); const btn = document.getElementById('submit-btn'); const originalText = btn.innerHTML; btn.innerHTML = '&lt;span class=\'material-symbols-outlined text-[18px] animate-spin\'&gt;sync&lt;/span&gt;&lt;span&gt;Message Transmitted&lt;/span&gt;'; setTimeout(() =&gt; { btn.innerHTML = originalText; alert('Thank you for reaching out, Rohitanshu will get back to you shortly.'); document.getElementById('contact-form').reset(); }, 1200);">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant" for="contact-name">Your Name</label>
+<input class="w-full px-space-md py-3 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="contact-name" placeholder="e.g. Sarah Connor" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant" for="contact-email">Your Email</label>
+<input class="w-full px-space-md py-3 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="contact-email" placeholder="s.connor@enterprise.ai" required="" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant" for="contact-subject">Subject / Project Scope</label>
+<input class="w-full px-space-md py-3 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="contact-subject" placeholder="AI Engineer Role / RAG Implementation Discussion" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant" for="contact-message">Your Message</label>
+<textarea class="w-full px-space-md py-3 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md focus:outline-none focus:ring-2 focus:ring-secondary transition-all resize-none" id="contact-message" placeholder="Details on your team, project requirements, or timelines..." required="" rows="4"></textarea>
+</div>
+<button class="mt-space-xs inline-flex items-center justify-center gap-2 px-space-xl py-3.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-xl hover:bg-primary-container hover:text-on-primary-container transition-all cursor-pointer" id="submit-btn" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Send Message</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20"><div class="max-w-[1280px] mx-auto px-gutter-sm lg:px-gutter-lg py-space-xl flex flex-col gap-space-xl"><div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg"><div class="space-y-space-xs"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Rohitanshu Dhar</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-secondary">v2.6.0</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Crafted for production-ready AI systems, scalable RAG architectures, and autonomous agent workflows.</p><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm pt-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span><span>Bhubaneswar, Odisha, India</span></div></div><div class="flex flex-wrap items-center gap-space-md"><a aria-label="GitHub Profile" class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-low border border-outline-variant/30 text-on-surface-variant hover:text-secondary hover:border-secondary/40 hover:bg-surface-container transition-all font-label-sm text-label-sm" href="https://github.com" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">terminal</span><span>GitHub</span></a><a aria-label="LinkedIn Profile" class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-low border border-outline-variant/30 text-on-surface-variant hover:text-secondary hover:border-secondary/40 hover:bg-surface-container transition-all font-label-sm text-label-sm" href="https://linkedin.com" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">hub</span><span>LinkedIn</span></a><a aria-label="Send Email" class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-low border border-outline-variant/30 text-on-surface-variant hover:text-secondary hover:border-secondary/40 hover:bg-surface-container transition-all font-label-sm text-label-sm" href="mailto:rohitanshu@example.com"><span class="material-symbols-outlined text-[18px]">mail</span><span>Email</span></a></div></div><div class="h-px w-full bg-outline-variant/20"></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-label-sm text-label-sm"><p>© 2026 Rohitanshu Dhar. Crafted for production-ready AI systems.</p><div class="flex items-center gap-space-lg"><nav class="flex items-center gap-space-md" data-active-classes="text-primary underline"><a aria-current="page" class="transition-colors text-primary underline" data-path="about" href="#">About</a><a class="hover:text-on-surface transition-colors" data-path="projects" href="#">Projects</a><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><a class="inline-flex items-center gap-1 hover:text-primary transition-colors" href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"><span class="material-symbols-outlined text-[16px]">arrow_upward</span><span>Back to Top</span></a></div></div></div></footer><script>const toggleBtn = document.getElementById('mobile-nav-toggle'); const mobileDrawer = document.getElementById('mobile-nav-drawer'); if (toggleBtn && mobileDrawer) { toggleBtn.addEventListener('click', () => { mobileDrawer.classList.toggle('hidden'); }); }</script></body></html>
