@@ -82,54 +82,14 @@ export default function Hero({ profile }) {
             </div>
           </div>
 
-          {/* Right Column: Squircle Avatar & Floating Badges */}
+          {/* Right Column: Transparent Cutout Photo */}
           <div className="hero-right">
-            {/* Subtle glow behind photo */}
-            <div
-              style={{
-                position: 'absolute',
-                width: '18rem',
-                height: '18rem',
-                borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(204, 208, 207, 0.12) 0%, transparent 70%)',
-                filter: 'blur(40px)',
-                pointerEvents: 'none'
-              }}
-            ></div>
-
-            {/* Squircle Photo Frame */}
-            <div className="avatar-squircle">
-              <div className="avatar-inner">
-                <img
-                  src={avatarUrl}
-                  alt={`${profile?.name || 'Rohitanshu Dhar'} - AI Engineer`}
-                  className="avatar-image"
-                />
-              </div>
-            </div>
-
-            {/* Floating Badge 1: Top-Left (Python) */}
-            <div className="floating-badge badge-pos-tl">
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#CCD0CF' }}></span>
-              <span>Python 3.12</span>
-            </div>
-
-            {/* Floating Badge 2: Top-Right (FastAPI) */}
-            <div className="floating-badge badge-pos-tr">
-              <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#CCD0CF' }}>bolt</span>
-              <span>FastAPI Async</span>
-            </div>
-
-            {/* Floating Badge 3: Bottom-Left (LangGraph) */}
-            <div className="floating-badge badge-pos-bl">
-              <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#CCD0CF' }}>account_tree</span>
-              <span>LangGraph Agents</span>
-            </div>
-
-            {/* Floating Badge 4: Bottom-Right (Vector RAG) */}
-            <div className="floating-badge badge-pos-br">
-              <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#CCD0CF' }}>database</span>
-              <span>Vector RAG</span>
+            <div className="hero-unbounded-photo-wrapper">
+              <img
+                src="/profile-cutout.png"
+                alt={`${profile?.name || 'Rohitanshu Dhar'} - AI Engineer`}
+                className="hero-unbounded-photo"
+              />
             </div>
           </div>
         </div>

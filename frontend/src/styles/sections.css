@@ -1,3 +1,45 @@
+/* ==================== DYNAMIC AMBIENT BACKGROUND GLOWS ==================== */
+.ambient-mesh-glow {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(110px);
+  opacity: 0.22;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.ambient-mesh-1 {
+  top: 10%;
+  left: -12%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, #253745 0%, #11212D 50%, transparent 80%);
+  animation: meshFloat1 22s ease-in-out infinite alternate;
+}
+
+.ambient-mesh-2 {
+  bottom: 8%;
+  right: -12%;
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(circle, #4A5C6A 0%, #253745 50%, transparent 80%);
+  animation: meshFloat2 28s ease-in-out infinite alternate;
+}
+
+@keyframes meshFloat1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(80px, 50px) scale(1.1); }
+  100% { transform: translate(-40px, 90px) scale(0.95); }
+}
+
+@keyframes meshFloat2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-90px, -60px) scale(1.12); }
+  100% { transform: translate(50px, -100px) scale(0.9); }
+}
+
 /* ==================== NAVBAR (ARCTIC SLATE & MIDNIGHT STEEL) ==================== */
 .navbar {
   position: fixed;
@@ -242,43 +284,49 @@
   }
 }
 
-.avatar-squircle {
+/* Unbounded Photo Display - Free Standing without boundary or frame */
+.hero-unbounded-photo-wrapper {
   position: relative;
-  width: 16rem;
-  height: 16rem;
-  border-radius: 1.75rem;
-  padding: 4px;
-  background: linear-gradient(135deg, #CCD0CF 0%, #4A5C6A 50%, #253745 100%);
-  box-shadow: 0 16px 40px rgba(6, 20, 27, 0.9);
+  width: 18rem;
+  height: 22rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  box-shadow: none;
 }
 
 @media (min-width: 640px) {
-  .avatar-squircle {
-    width: 20rem;
-    height: 20rem;
+  .hero-unbounded-photo-wrapper {
+    width: 22rem;
+    height: 26rem;
   }
 }
 
-.avatar-inner {
-  width: 100%;
-  height: 100%;
-  border-radius: calc(1.75rem - 4px);
-  overflow: hidden;
-  background-color: #06141B;
-  position: relative;
+@media (min-width: 1024px) {
+  .hero-unbounded-photo-wrapper {
+    width: 25rem;
+    height: 29rem;
+  }
 }
 
-.avatar-image {
+.hero-unbounded-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 12%;
-  filter: contrast(1.04);
-  transition: transform 0.5s ease;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.65));
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
 }
 
-.avatar-squircle:hover .avatar-image {
+.hero-unbounded-photo-wrapper:hover .hero-unbounded-photo {
   transform: scale(1.04);
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.85)) contrast(1.04);
 }
 
 .floating-badge {
@@ -638,12 +686,38 @@
   flex: 0 0 100%;
   min-width: 100%;
   box-sizing: border-box;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease, filter 0.5s ease;
+  transform: scale(0.92) translateY(12px);
+  opacity: 0.35;
+  filter: blur(1.5px);
 }
 
-@media (min-width: 1024px) {
-  .exp-slide-card {
-    flex: 0 0 100%;
-    min-width: 100%;
+.exp-slide-card.active {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+.exp-slide-card.active .glass-card {
+  border-color: #4A5C6A;
+  box-shadow: 0 20px 50px rgba(6, 20, 27, 0.95), 0 0 30px rgba(204, 208, 207, 0.1);
+}
+
+.exp-slide-card.active li {
+  animation: roleBulletIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.exp-slide-card.active li:nth-child(1) { animation-delay: 0.08s; }
+.exp-slide-card.active li:nth-child(2) { animation-delay: 0.16s; }
+.exp-slide-card.active li:nth-child(3) { animation-delay: 0.24s; }
+
+@keyframes roleBulletIn {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -684,7 +758,13 @@
   width: 24px;
   border-radius: 9999px;
   background-color: #CCD0CF;
-  box-shadow: 0 0 10px rgba(204, 208, 207, 0.6);
+  box-shadow: 0 0 14px rgba(204, 208, 207, 0.9);
+  animation: dotGlowPulse 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes dotGlowPulse {
+  0% { box-shadow: 0 0 8px rgba(204, 208, 207, 0.6); }
+  100% { box-shadow: 0 0 20px rgba(204, 208, 207, 1); }
 }
 
 .exp-ctrl-btn {
@@ -753,32 +833,46 @@
   flex: 0 0 100%;
   min-width: 100%;
   box-sizing: border-box;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
-  transform: scale(0.93);
-  opacity: 0.4;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease, filter 0.5s ease;
+  transform: scale(0.9) translateY(14px);
+  opacity: 0.25;
+  filter: blur(2px);
 }
 
 .proj-slide-card.active {
-  transform: scale(1);
+  transform: scale(1.02) translateY(0);
   opacity: 1;
+  filter: blur(0);
 }
 
 .proj-slide-inner {
   background-color: #11212D;
   border: 1px solid #253745;
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 2.25rem;
   box-shadow: 0 16px 40px rgba(6, 20, 27, 0.8);
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 22rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .proj-slide-card.active .proj-slide-inner {
   border-color: #4A5C6A;
-  box-shadow: 0 20px 50px rgba(6, 20, 27, 0.9), 0 0 30px rgba(204, 208, 207, 0.1);
+  box-shadow: 0 25px 60px rgba(6, 20, 27, 0.95), 0 0 35px rgba(204, 208, 207, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: activeCardPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes activeCardPulse {
+  0% {
+    box-shadow: 0 25px 60px rgba(6, 20, 27, 0.95), 0 0 28px rgba(204, 208, 207, 0.08);
+  }
+  100% {
+    box-shadow: 0 25px 60px rgba(6, 20, 27, 0.95), 0 0 48px rgba(204, 208, 207, 0.22);
+  }
 }
 
 /* Page 6: Achievements Deck */
@@ -793,6 +887,29 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.deck-card-achievements .glass-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.deck-card-achievements .glass-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #4A5C6A;
+  box-shadow: 0 24px 50px rgba(6, 20, 27, 0.95), 0 0 30px rgba(204, 208, 207, 0.15);
+}
+
+.deck-card-achievements .glass-card:hover .material-symbols-outlined {
+  animation: medalBounce 0.8s ease;
+}
+
+@keyframes medalBounce {
+  0% { transform: scale(1); }
+  20% { transform: scale(1.25) rotate(-8deg); }
+  40% { transform: scale(1.2) rotate(8deg); }
+  60% { transform: scale(1.1) rotate(-4deg); }
+  80% { transform: scale(1.05) rotate(4deg); }
+  100% { transform: scale(1) rotate(0); }
 }
 
 /* Page 7: Education Deck - Scroll-Driven Timeline Track */
@@ -851,6 +968,25 @@
   box-shadow: 0 0 10px rgba(204, 208, 207, 0.4);
 }
 
+.edu-spine-line-fill::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 9px;
+  height: 9px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 1), 0 0 28px rgba(204, 208, 207, 0.8);
+  animation: laserPulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes laserPulse {
+  0% { transform: translateX(-50%) scale(0.9); opacity: 0.8; }
+  100% { transform: translateX(-50%) scale(1.4); opacity: 1; }
+}
+
 .edu-timeline-item {
   position: relative;
   display: flex;
@@ -878,7 +1014,35 @@
   background-color: #CCD0CF;
   border-color: #FFFFFF;
   box-shadow: 0 0 16px rgba(204, 208, 207, 0.9), 0 0 28px rgba(204, 208, 207, 0.4);
-  transform: translate(calc(1rem - 50%), -50%) scale(1.25);
+  transform: translate(calc(1rem - 50%), -50%) scale(1.3);
+  animation: nodeRipplePulse 2.5s infinite;
+}
+
+@keyframes nodeRipplePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(204, 208, 207, 0.8), 0 0 16px rgba(204, 208, 207, 0.9);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(204, 208, 207, 0), 0 0 25px rgba(204, 208, 207, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(204, 208, 207, 0), 0 0 16px rgba(204, 208, 207, 0.9);
+  }
+}
+
+.edu-timeline-item.active .badge-pill {
+  animation: pillPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes pillPulse {
+  0% {
+    border-color: #4A5C6A;
+    box-shadow: 0 0 6px rgba(204, 208, 207, 0.2);
+  }
+  100% {
+    border-color: #CCD0CF;
+    box-shadow: 0 0 16px rgba(204, 208, 207, 0.5);
+  }
 }
 
 .edu-card-wrapper {

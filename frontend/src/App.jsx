@@ -11,6 +11,7 @@ import Education from './components/sections/Education';
 import Contact from './components/sections/Contact';
 import NextPageIndicator from './components/common/NextPageIndicator';
 import PageRail from './components/common/PageRail';
+import ScrollProgressBar from './components/common/ScrollProgressBar';
 
 import { useActiveSection } from './hooks/useActiveSection';
 import {
@@ -65,7 +66,14 @@ export default function App() {
   }, []);
 
   return (
-    <div className="portfolio-app" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="portfolio-app" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', position: 'relative' }}>
+      {/* Top Global Scroll Progress Indicator */}
+      <ScrollProgressBar />
+
+      {/* Dynamic Ambient Background Sheens */}
+      <div className="ambient-mesh-glow ambient-mesh-1" aria-hidden="true" />
+      <div className="ambient-mesh-glow ambient-mesh-2" aria-hidden="true" />
+
       <Navbar activeSection={activeSection} profile={profile} />
 
       {/* Floating Right Page Rail for Desktop */}

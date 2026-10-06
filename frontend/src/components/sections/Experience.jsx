@@ -104,7 +104,7 @@ export default function Experience({ experiences = [] }) {
               }}
             >
               {experiences.map((exp, idx) => (
-                <div key={idx} className="exp-slide-card">
+                <div key={idx} className={`exp-slide-card ${currentIndex === idx ? 'active' : ''}`}>
                   <div
                     className="glass-card"
                     style={{
