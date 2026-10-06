@@ -39,12 +39,13 @@ export default function Contact({ profile }) {
   };
 
   return (
-    <section className="container" id="contact" style={{ paddingBottom: 'var(--space-2xl)' }}>
-      <SectionHeader
-        eyebrow="Get In Touch"
-        title="Let's build something together"
-        description="Open for full-time AI Engineer opportunities, high-impact enterprise contracts, and cutting-edge GenAI architecture collaborations."
-      />
+    <section className="deck-card-contact page-screen" id="contact">
+      <div className="container">
+        <SectionHeader
+          eyebrow="Get In Touch"
+          title="Let's build something together"
+          description="Open for full-time AI Engineer opportunities, high-impact enterprise contracts, and cutting-edge GenAI architecture collaborations."
+        />
 
       <div className="contact-grid">
         {/* Left Column: Direct Channels */}
@@ -296,6 +297,7 @@ export default function Contact({ profile }) {
             </button>
           </form>
         </div>
+      </div>
       </div>
     </section>
   );

@@ -3,12 +3,13 @@ import SectionHeader from '../common/SectionHeader';
 
 export default function Skills({ skills = [] }) {
   return (
-    <section className="container" id="skills" style={{ paddingBottom: 'var(--space-2xl)' }}>
-      <SectionHeader
-        eyebrow="Technical Arsenal"
-        title="Skills & Technologies"
-        description="A comprehensive suite of modern neural libraries, deployment runtimes, distributed databases, and developer tooling."
-      />
+    <section className="deck-card-skills page-screen" id="skills">
+      <div className="container">
+        <SectionHeader
+          eyebrow="Technical Arsenal"
+          title="Skills & Technologies"
+          description="A comprehensive suite of modern neural libraries, deployment runtimes, distributed databases, and developer tooling."
+        />
 
       <div className="skills-grid">
         {skills.map((cat, idx) => {
@@ -70,6 +71,7 @@ export default function Skills({ skills = [] }) {
             </div>
           );
         })}
+      </div>
       </div>
     </section>
   );

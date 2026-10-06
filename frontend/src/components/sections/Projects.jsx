@@ -3,12 +3,13 @@ import SectionHeader from '../common/SectionHeader';
 
 export default function Projects({ projects = [] }) {
   return (
-    <section className="container" id="projects" style={{ paddingBottom: 'var(--space-2xl)' }}>
-      <SectionHeader
-        eyebrow="Featured Work"
-        title="Production & Autonomous AI Systems"
-        description="Selected engineering builds spanning context-rich agent loops, document evaluation engines, and edge-optimized local intelligence."
-      />
+    <section className="deck-card-projects page-screen" id="projects">
+      <div className="container">
+        <SectionHeader
+          eyebrow="Featured Work"
+          title="Production & Autonomous AI Systems"
+          description="Selected engineering builds spanning context-rich agent loops, document evaluation engines, and edge-optimized local intelligence."
+        />
 
       <div className="projects-grid">
         {projects.map((proj, idx) => {
@@ -83,6 +84,7 @@ export default function Projects({ projects = [] }) {
             </div>
           );
         })}
+      </div>
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ export default function Hero({ profile }) {
     : '/profile.jpg';
 
   return (
-    <section className="hero-section" id="hero">
+    <section className="hero-page-screen hero-section" id="hero">
       {/* Ambient Radial Glows */}
       <div className="ambient-glow-wrapper">
         <div className="glow-orb glow-orb-primary" style={{ top: '-8rem', left: '20%' }}></div>

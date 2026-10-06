@@ -32,11 +32,12 @@ export default function About({ profile }) {
   ];
 
   return (
-    <section className="container" id="about" style={{ paddingBottom: 'var(--space-2xl)' }}>
-      <SectionHeader
-        eyebrow="About Me"
-        title={profile?.aboutHeading || 'Engineering Intelligence at Scale'}
-      />
+    <section className="deck-card-about page-screen" id="about">
+      <div className="container">
+        <SectionHeader
+          eyebrow="About Me"
+          title={profile?.aboutHeading || 'Engineering Intelligence at Scale'}
+        />
 
       <div className="about-grid">
         {/* Left Column: Bio Narrative */}
@@ -107,6 +108,7 @@ export default function About({ profile }) {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

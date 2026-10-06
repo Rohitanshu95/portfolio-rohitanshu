@@ -1,11 +1,28 @@
 import { useState, useEffect } from 'react';
 
-export function useActiveSection(sectionIds = ['hero', 'about', 'skills', 'experience', 'projects', 'achievements', 'contact']) {
-  const [activeSection, setActiveSection] = useState('about');
+const DEFAULT_SECTIONS = [
+  'hero',
+  'about',
+  'skills',
+  'experience',
+  'projects',
+  'achievements',
+  'education',
+  'contact'
+];
+
+export function useActiveSection(sectionIds = DEFAULT_SECTIONS) {
+  const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPos = window.scrollY + 200;
+      // If near the top, active is hero
+      if (window.scrollY < window.innerHeight * 0.4) {
+        setActiveSection('hero');
+        return;
+      }
+
+      const scrollPos = window.scrollY + window.innerHeight * 0.4;
 
       for (let i = sectionIds.length - 1; i >= 0; i--) {
         const id = sectionIds[i];
@@ -13,7 +30,7 @@ export function useActiveSection(sectionIds = ['hero', 'about', 'skills', 'exper
         if (elem) {
           const top = elem.offsetTop;
           if (scrollPos >= top) {
-            setActiveSection(id === 'hero' ? 'about' : id);
+            setActiveSection(id);
             break;
           }
         }

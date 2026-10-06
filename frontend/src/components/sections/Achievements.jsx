@@ -6,12 +6,13 @@ export default function Achievements({ achievements = [] }) {
   const certifications = achievements.filter((a) => a.type === 'certification');
 
   return (
-    <section className="container" id="achievements" style={{ paddingBottom: 'var(--space-2xl)' }}>
-      <SectionHeader
-        eyebrow="Honors & Recognition"
-        title="Hackathons & Credentials"
-        description="Demonstrated rapid prototyping under competitive pressure and validated engineering foundations."
-      />
+    <section className="deck-card-achievements page-screen" id="achievements">
+      <div className="container">
+        <SectionHeader
+          eyebrow="Honors & Recognition"
+          title="Hackathons & Credentials"
+          description="Demonstrated rapid prototyping under competitive pressure and validated engineering foundations."
+        />
 
       {/* Hackathons Grid */}
       <div className="achievements-grid" style={{ marginBottom: '1.5rem' }}>
@@ -114,6 +115,7 @@ export default function Achievements({ achievements = [] }) {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

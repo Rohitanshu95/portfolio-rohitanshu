@@ -11,11 +11,12 @@ export default function Education({ profile }) {
   };
 
   return (
-    <section className="container" id="education" style={{ paddingBottom: 'var(--space-2xl)' }}>
-      <SectionHeader
-        eyebrow="Academic Background"
-        title="Formal Education"
-      />
+    <section className="deck-card-education page-screen" id="education">
+      <div className="container">
+        <SectionHeader
+          eyebrow="Academic Background"
+          title="Formal Education"
+        />
 
       <div
         className="glass-card"
@@ -75,6 +76,7 @@ export default function Education({ profile }) {
           <span style={{ fontSize: '1.125rem', fontWeight: 700, color: '#ffffff' }}>{edu.cohort}</span>
           <span style={{ fontSize: '0.75rem', color: '#71717a', fontFamily: 'var(--font-mono)' }}>{edu.location}</span>
         </div>
+      </div>
       </div>
     </section>
   );

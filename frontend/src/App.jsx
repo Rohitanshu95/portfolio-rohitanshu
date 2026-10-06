@@ -9,6 +9,8 @@ import Projects from './components/sections/Projects';
 import Achievements from './components/sections/Achievements';
 import Education from './components/sections/Education';
 import Contact from './components/sections/Contact';
+import NextPageIndicator from './components/common/NextPageIndicator';
+import PageRail from './components/common/PageRail';
 
 import { useActiveSection } from './hooks/useActiveSection';
 import {
@@ -65,6 +67,12 @@ export default function App() {
   return (
     <div className="portfolio-app" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Navbar activeSection={activeSection} profile={profile} />
+
+      {/* Floating Right Page Rail for Desktop */}
+      <PageRail activeSection={activeSection} />
+
+      {/* Floating Animated Next Page Prompt */}
+      <NextPageIndicator activeSection={activeSection} />
 
       <main style={{ flex: 1, width: '100%' }}>
         <Hero profile={profile} />
