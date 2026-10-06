@@ -24,8 +24,8 @@ body {
 }
 
 ::selection {
-  background-color: var(--primary-container);
-  color: var(--on-primary-container);
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* Material Symbols Outlined Default Styling */
@@ -77,21 +77,21 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--tertiary) 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #e4e4e7 45%, #a1a1aa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-secondary {
-  color: var(--secondary);
+  color: var(--on-surface);
 }
 
 .text-primary {
-  color: var(--primary);
+  color: #ffffff;
 }
 
 .text-tertiary {
-  color: var(--tertiary);
+  color: var(--on-surface-variant);
 }
 
 .text-muted {

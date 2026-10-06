@@ -16,12 +16,6 @@ export default function Achievements({ achievements = [] }) {
       {/* Hackathons Grid */}
       <div className="achievements-grid" style={{ marginBottom: '1.5rem' }}>
         {hackathons.map((item, idx) => {
-          const accentColor = item.badgeColor === 'primary' 
-            ? 'var(--primary)' 
-            : item.badgeColor === 'tertiary' 
-            ? 'var(--tertiary)' 
-            : 'var(--secondary)';
-
           return (
             <div key={idx} className="glass-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '1rem' }}>
               <div
@@ -29,11 +23,12 @@ export default function Achievements({ achievements = [] }) {
                   width: '3rem',
                   height: '3rem',
                   borderRadius: '0.75rem',
-                  backgroundColor: 'var(--surface-high)',
+                  backgroundColor: '#202024',
+                  border: '1px solid rgba(255, 255, 255, 0.12)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: accentColor
+                  color: '#ffffff'
                 }}
               >
                 <span className="material-symbols-outlined" style={{ fontSize: '28px', fontVariationSettings: "'FILL' 1" }}>
@@ -48,7 +43,7 @@ export default function Achievements({ achievements = [] }) {
                     fontSize: '0.6875rem',
                     textTransform: 'uppercase',
                     letterSpacing: '0.06em',
-                    color: accentColor,
+                    color: '#a1a1aa',
                     fontWeight: 600,
                     display: 'block'
                   }}
@@ -56,11 +51,11 @@ export default function Achievements({ achievements = [] }) {
                   {item.badge}
                 </span>
 
-                <h4 style={{ fontSize: '1.1875rem', fontWeight: 600, color: 'var(--on-surface)', marginTop: '4px' }}>
+                <h4 style={{ fontSize: '1.1875rem', fontWeight: 700, color: '#ffffff', marginTop: '4px' }}>
                   {item.title}
                 </h4>
 
-                <p style={{ fontSize: '0.8125rem', color: 'var(--on-surface-variant)', marginTop: '4px', lineHeight: 1.5 }}>
+                <p style={{ fontSize: '0.8125rem', color: '#a1a1aa', marginTop: '4px', lineHeight: 1.5 }}>
                   {item.description}
                 </p>
               </div>
@@ -82,12 +77,12 @@ export default function Achievements({ achievements = [] }) {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem' }}>
-          <span className="material-symbols-outlined" style={{ fontSize: '28px', color: 'var(--secondary)' }}>
+          <span className="material-symbols-outlined" style={{ fontSize: '28px', color: '#ffffff' }}>
             verified
           </span>
           <div>
-            <span style={{ fontSize: '1.125rem', fontWeight: 600, display: 'block' }}>Professional Certifications</span>
-            <span style={{ fontSize: '0.8125rem', color: 'var(--on-surface-variant)' }}>
+            <span style={{ fontSize: '1.125rem', fontWeight: 700, color: '#ffffff', display: 'block' }}>Professional Certifications</span>
+            <span style={{ fontSize: '0.8125rem', color: '#a1a1aa' }}>
               Validated domain competencies & algorithmic expertise
             </span>
           </div>
@@ -101,8 +96,9 @@ export default function Achievements({ achievements = [] }) {
               style={{
                 padding: '0.5rem 1rem',
                 borderRadius: '0.75rem',
-                backgroundColor: 'var(--surface-high)',
-                color: 'var(--on-surface)',
+                backgroundColor: '#18181b',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
+                color: '#ffffff',
                 fontSize: '0.8125rem'
               }}
             >
@@ -111,7 +107,7 @@ export default function Achievements({ achievements = [] }) {
                   width: '6px',
                   height: '6px',
                   borderRadius: '50%',
-                  background: cert.badgeColor === 'primary' ? 'var(--primary)' : 'var(--secondary)'
+                  background: '#ffffff'
                 }}
               ></span>
               <span>{cert.title}</span>

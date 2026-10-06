@@ -79,8 +79,12 @@ export default function Navbar({ activeSection = 'about', profile }) {
             <span>Download Resume</span>
           </a>
 
-          <div className="nav-avatar-icon" title="AI Engineer">
-            <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>person</span>
+          <div className="nav-avatar-icon" style={{ overflow: 'hidden', padding: 0 }} title="Rohitanshu Dhar">
+            <img 
+              src="/profile.jpg" 
+              alt="Rohitanshu Dhar" 
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 12%' }} 
+            />
           </div>
 
           <button

@@ -12,12 +12,6 @@ export default function Projects({ projects = [] }) {
 
       <div className="projects-grid">
         {projects.map((proj, idx) => {
-          const accentColor = proj.categoryColor === 'primary' 
-            ? 'var(--primary)' 
-            : proj.categoryColor === 'tertiary' 
-            ? 'var(--tertiary)' 
-            : 'var(--secondary)';
-
           return (
             <div key={idx} className="glass-card project-card">
               {/* Card Body */}
@@ -26,22 +20,22 @@ export default function Projects({ projects = [] }) {
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                   <span
                     className="badge badge-pill"
-                    style={{ color: accentColor, backgroundColor: 'var(--surface-high)', fontSize: '0.6875rem' }}
+                    style={{ color: '#ffffff', backgroundColor: '#18181b', border: '1px solid rgba(255, 255, 255, 0.15)', fontSize: '0.6875rem' }}
                   >
                     {proj.categoryBadge}
                   </span>
-                  <span className="material-symbols-outlined" style={{ fontSize: '20px', color: accentColor }}>
+                  <span className="material-symbols-outlined" style={{ fontSize: '20px', color: '#ffffff' }}>
                     {proj.icon || 'code'}
                   </span>
                 </div>
 
                 {/* Project Title */}
-                <h4 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--on-surface)', marginTop: '4px' }}>
+                <h4 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#ffffff', marginTop: '4px' }}>
                   {proj.title}
                 </h4>
 
                 {/* Description */}
-                <p style={{ fontSize: '0.9375rem', color: 'var(--on-surface-variant)', lineHeight: 1.6 }}>
+                <p style={{ fontSize: '0.9375rem', color: '#a1a1aa', lineHeight: 1.6 }}>
                   {proj.description}
                 </p>
 
@@ -53,8 +47,9 @@ export default function Projects({ projects = [] }) {
                         key={tIdx}
                         className="badge"
                         style={{
-                          backgroundColor: 'var(--surface-container)',
-                          color: 'var(--on-surface-variant)',
+                          backgroundColor: '#18181b',
+                          color: '#e4e4e7',
+                          border: '1px solid rgba(255, 255, 255, 0.08)',
                           fontSize: '0.6875rem'
                         }}
                       >

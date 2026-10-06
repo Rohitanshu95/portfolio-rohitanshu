@@ -15,37 +15,30 @@ export default function Experience({ experiences = [] }) {
         <div className="timeline-spine"></div>
 
         {experiences.map((exp, idx) => {
-          const nodeColorClass = `timeline-node-${exp.nodeColor || 'secondary'}`;
-          const companyColor = exp.companyColor === 'primary' 
-            ? 'var(--primary)' 
-            : exp.companyColor === 'tertiary' 
-            ? 'var(--tertiary)' 
-            : 'var(--secondary)';
-
           return (
             <div key={idx} className="glass-card" style={{ position: 'relative' }}>
               {/* Timeline Marker Node */}
-              <div className={`timeline-node ${nodeColorClass}`}></div>
+              <div className="timeline-node timeline-node-primary"></div>
 
               {/* Header: Role & Period */}
               <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem' }}>
                 <div>
-                  <h4 style={{ fontSize: '1.25rem', fontWeight: 600 }}>{exp.role}</h4>
-                  <p style={{ color: companyColor, fontSize: '0.9375rem', marginTop: '2px' }}>
+                  <h4 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#ffffff' }}>{exp.role}</h4>
+                  <p style={{ color: '#a1a1aa', fontSize: '0.9375rem', marginTop: '2px' }}>
                     {exp.company}
                   </p>
                 </div>
 
                 <span
                   className="badge badge-pill"
-                  style={{ backgroundColor: 'var(--surface-high)', color: 'var(--on-surface-variant)', fontSize: '0.75rem' }}
+                  style={{ backgroundColor: '#18181b', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.12)', fontSize: '0.75rem' }}
                 >
                   {exp.period}
                 </span>
               </div>
 
               {/* Highlights List */}
-              <ul style={{ marginTop: '1rem', paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', color: 'var(--on-surface-variant)', fontSize: '0.9375rem', lineHeight: 1.6 }}>
+              <ul style={{ marginTop: '1rem', paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', color: '#a1a1aa', fontSize: '0.9375rem', lineHeight: 1.6 }}>
                 {exp.highlights?.map((point, pIdx) => (
                   <li key={pIdx}>{point}</li>
                 ))}
@@ -60,8 +53,9 @@ export default function Experience({ experiences = [] }) {
                       className="badge"
                       style={{
                         fontSize: '0.6875rem',
-                        color: companyColor,
-                        backgroundColor: 'var(--surface-high)'
+                        color: '#ffffff',
+                        backgroundColor: '#18181b',
+                        border: '1px solid rgba(255, 255, 255, 0.1)'
                       }}
                     >
                       {tech}

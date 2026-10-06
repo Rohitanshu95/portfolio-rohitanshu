@@ -26,20 +26,21 @@ export default function Skills({ skills = [] }) {
                     className="material-symbols-outlined"
                     style={{
                       fontSize: '24px',
-                      color: cat.iconColor === 'primary' ? 'var(--primary)' : cat.iconColor === 'tertiary' ? 'var(--tertiary)' : 'var(--secondary)'
+                      color: '#ffffff'
                     }}
                   >
                     {cat.icon || 'code'}
                   </span>
-                  <h4 style={{ fontSize: '1.1875rem', fontWeight: 600 }}>{cat.category}</h4>
+                  <h4 style={{ fontSize: '1.1875rem', fontWeight: 600, color: '#ffffff' }}>{cat.category}</h4>
                 </div>
 
                 {cat.specializationTag && (
                   <span
                     className="badge"
                     style={{
-                      backgroundColor: 'var(--surface-highest)',
-                      color: 'var(--secondary)',
+                      backgroundColor: '#27272a',
+                      color: '#ffffff',
+                      border: '1px solid rgba(255, 255, 255, 0.2)',
                       fontSize: '0.625rem',
                       textTransform: 'uppercase',
                       letterSpacing: '0.06em'

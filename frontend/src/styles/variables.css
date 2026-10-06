@@ -1,43 +1,43 @@
 :root {
-  /* Canvas & Surface Elevations (DESIGN.md) */
-  --bg-canvas: #0f131d;
-  --surface: #0f131d;
-  --surface-dim: #0f131d;
-  --surface-bright: #353944;
-  --surface-lowest: #0a0e18;
-  --surface-low: #171b26;
-  --surface-container: #1c1f2a;
-  --surface-high: #262a35;
-  --surface-highest: #313540;
-  --surface-variant: #313540;
+  /* ==================== MONOCHROME CANVAS & SURFACES ==================== */
+  --bg-canvas: #09090b;
+  --surface: #09090b;
+  --surface-dim: #050507;
+  --surface-bright: #27272a;
+  --surface-lowest: #000000;
+  --surface-low: #111113;
+  --surface-container: #18181b;
+  --surface-high: #202024;
+  --surface-highest: #27272a;
+  --surface-variant: #27272a;
 
-  /* Accent & Brand Colors */
-  --primary: #c0c1ff;
-  --primary-container: #8083ff;
-  --on-primary: #1000a9;
-  --on-primary-container: #0d0096;
-  --primary-fixed: #e1e0ff;
+  /* ==================== BLACK & WHITE PALETTE ==================== */
+  --primary: #ffffff;
+  --primary-container: #27272a;
+  --on-primary: #000000;
+  --on-primary-container: #ffffff;
+  --primary-fixed: #f4f4f5;
 
-  --secondary: #4cd7f6;
-  --secondary-container: #03b5d3;
-  --on-secondary: #003640;
-  --on-secondary-container: #00424e;
+  --secondary: #e4e4e7;
+  --secondary-container: #27272a;
+  --on-secondary: #000000;
+  --on-secondary-container: #ffffff;
 
-  --tertiary: #7bd0ff;
-  --tertiary-container: #009bd1;
-  --on-tertiary: #00354a;
+  --tertiary: #d4d4d8;
+  --tertiary-container: #27272a;
+  --on-tertiary: #000000;
 
-  /* Semantic State Colors */
-  --success: #10b981;
-  --warning: #f59e0b;
-  --error: #ffb4ab;
-  --on-error: #690005;
+  /* Semantic State Colors (Monochrome Adjusted) */
+  --success: #f4f4f5;
+  --warning: #d4d4d8;
+  --error: #fca5a5;
+  --on-error: #450a0a;
 
-  /* Typography Colors */
-  --on-surface: #dfe2f1;
-  --on-surface-variant: #c7c4d7;
-  --outline: #908fa0;
-  --outline-variant: #464554;
+  /* ==================== TEXT & TYPOGRAPHY COLORS ==================== */
+  --on-surface: #ffffff;
+  --on-surface-variant: #a1a1aa;
+  --outline: #71717a;
+  --outline-variant: #3f3f46;
 
   /* Typography Families */
   --font-headline: 'Space Grotesk', -apple-system, sans-serif;
@@ -64,18 +64,18 @@
   --radius-xl: 1.5rem;
   --radius-full: 9999px;
 
-  /* Shadows & Ambient Glows */
-  --glow-primary: 0 0 24px -4px rgba(192, 193, 255, 0.35);
-  --glow-secondary: 0 0 20px -2px rgba(76, 215, 246, 0.4);
-  --glow-tertiary: 0 0 20px -2px rgba(123, 208, 255, 0.4);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  /* Shadows & Ambient Monochrome Glows */
+  --glow-primary: 0 0 24px -4px rgba(255, 255, 255, 0.25);
+  --glow-secondary: 0 0 20px -2px rgba(255, 255, 255, 0.18);
+  --glow-tertiary: 0 0 20px -2px rgba(255, 255, 255, 0.12);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.85);
 
   /* Hairline Borders */
-  --border-subtle: 1px solid rgba(255, 255, 255, 0.06);
-  --border-card: 1px solid rgba(70, 69, 84, 0.4);
-  --border-card-hover: 1px solid rgba(76, 215, 246, 0.4);
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.08);
+  --border-card: 1px solid rgba(255, 255, 255, 0.1);
+  --border-card-hover: 1px solid rgba(255, 255, 255, 0.35);
 
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);

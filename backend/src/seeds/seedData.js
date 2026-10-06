@@ -49,7 +49,7 @@ const seedProfile = {
   githubUrl: 'https://github.com/Rohitanshu95',
   linkedinUrl: 'https://linkedin.com/in/rohitanshu-dhar',
   resumeUrl: '/resume.pdf',
-  avatarUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDqoaGGAnziDEbngJ-LmfICvomHyTXXqiJgsif7Fl5AQV02w5pNfqzERGEosM86fHKYDtT0WZ6TrQOWKLCZcCBxMNXzOWSMax-CA3Khqj3h8RPnwr6e0nrwnOpdDcUpGM7w3zZxoDWlMXl1cyrPLrRJaTsHIJz8epNlARRoa0kQuUQCNWp2nkSNNqPDAHkgtwjDtvMu_OnDLjBA2ENfXtU9Yv5j0_HnQctHfYse7y8SToIu5IaK_UWCkg',
+  avatarUrl: '/profile.jpg',
   education: {
     degree: 'Bachelor of Technology (B.Tech) in Computer Science and Engineering',
     institution: 'GIET, Bhubaneswar (Affiliated to BPUT)',

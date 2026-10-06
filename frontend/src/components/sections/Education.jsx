@@ -35,11 +35,12 @@ export default function Education({ profile }) {
               width: '3.5rem',
               height: '3.5rem',
               borderRadius: '1rem',
-              backgroundColor: 'var(--surface-high)',
+              backgroundColor: '#202024',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: 'var(--secondary)',
+              color: '#ffffff',
               flexShrink: 0,
               marginTop: '4px'
             }}
@@ -48,9 +49,9 @@ export default function Education({ profile }) {
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-            <h4 style={{ fontSize: '1.1875rem', fontWeight: 600 }}>{edu.degree}</h4>
-            <p style={{ color: 'var(--secondary)', fontSize: '0.9375rem' }}>{edu.institution}</p>
-            <p style={{ color: 'var(--on-surface-variant)', fontSize: '0.8125rem', lineHeight: 1.5, marginTop: '4px' }}>
+            <h4 style={{ fontSize: '1.1875rem', fontWeight: 700, color: '#ffffff' }}>{edu.degree}</h4>
+            <p style={{ color: '#a1a1aa', fontSize: '0.9375rem' }}>{edu.institution}</p>
+            <p style={{ color: '#a1a1aa', fontSize: '0.8125rem', lineHeight: 1.5, marginTop: '4px' }}>
               {edu.coursework}
             </p>
           </div>
@@ -62,16 +63,17 @@ export default function Education({ profile }) {
             flexDirection: 'column',
             alignItems: 'flex-start',
             gap: '2px',
-            backgroundColor: 'var(--surface-high)',
+            backgroundColor: '#18181b',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
             padding: '0.75rem 1.25rem',
             borderRadius: '0.75rem'
           }}
         >
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--secondary)' }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#a1a1aa' }}>
             Enrolled Cohort
           </span>
-          <span style={{ fontSize: '1.125rem', fontWeight: 600, color: 'var(--on-surface)' }}>{edu.cohort}</span>
-          <span style={{ fontSize: '0.75rem', color: 'var(--on-surface-variant)', fontFamily: 'var(--font-mono)' }}>{edu.location}</span>
+          <span style={{ fontSize: '1.125rem', fontWeight: 700, color: '#ffffff' }}>{edu.cohort}</span>
+          <span style={{ fontSize: '0.75rem', color: '#71717a', fontFamily: 'var(--font-mono)' }}>{edu.location}</span>
         </div>
       </div>
     </section>
