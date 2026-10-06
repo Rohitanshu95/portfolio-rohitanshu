@@ -1,122 +1,83 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import Hero from './components/sections/Hero';
+import About from './components/sections/About';
+import Skills from './components/sections/Skills';
+import Experience from './components/sections/Experience';
+import Projects from './components/sections/Projects';
+import Achievements from './components/sections/Achievements';
+import Education from './components/sections/Education';
+import Contact from './components/sections/Contact';
 
-function App() {
-  const [count, setCount] = useState(0)
+import { useActiveSection } from './hooks/useActiveSection';
+import {
+  fetchProfile,
+  fetchSkills,
+  fetchExperience,
+  fetchProjects,
+  fetchAchievements
+} from './services/api';
+
+import {
+  defaultProfile,
+  defaultSkills,
+  defaultExperiences,
+  defaultProjects,
+  defaultAchievements
+} from './data/fallbackData';
+
+export default function App() {
+  const activeSection = useActiveSection();
+
+  // Initialize with fallback data for instant paint
+  const [profile, setProfile] = useState(defaultProfile);
+  const [skills, setSkills] = useState(defaultSkills);
+  const [experiences, setExperiences] = useState(defaultExperiences);
+  const [projects, setProjects] = useState(defaultProjects);
+  const [achievements, setAchievements] = useState(defaultAchievements);
+
+  // Hydrate from live backend API
+  useEffect(() => {
+    async function loadPortfolioData() {
+      try {
+        const [profData, skillData, expData, projData, achData] = await Promise.all([
+          fetchProfile(),
+          fetchSkills(),
+          fetchExperience(),
+          fetchProjects(),
+          fetchAchievements()
+        ]);
+
+        if (profData) setProfile(profData);
+        if (skillData && skillData.length > 0) setSkills(skillData);
+        if (expData && expData.length > 0) setExperiences(expData);
+        if (projData && projData.length > 0) setProjects(projData);
+        if (achData && achData.length > 0) setAchievements(achData);
+      } catch (err) {
+        console.warn('[App] Error hydrating portfolio data:', err);
+      }
+    }
+
+    loadPortfolioData();
+  }, []);
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="portfolio-app" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <Navbar activeSection={activeSection} profile={profile} />
 
-      <div className="ticks"></div>
+      <main style={{ flex: 1, width: '100%' }}>
+        <Hero profile={profile} />
+        <About profile={profile} />
+        <Skills skills={skills} />
+        <Experience experiences={experiences} />
+        <Projects projects={projects} />
+        <Achievements achievements={achievements} />
+        <Education profile={profile} />
+        <Contact profile={profile} />
+      </main>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      <Footer profile={profile} />
+    </div>
+  );
 }
-
-export default App
