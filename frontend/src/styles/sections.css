@@ -1542,8 +1542,14 @@
 /* Page 7: Education Deck - Scroll-Driven Timeline Track */
 .scroll-track-education {
   position: relative;
-  height: 250vh;
+  height: 200vh;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .scroll-track-education {
+    height: auto;
+  }
 }
 
 .deck-card-education {
@@ -1557,26 +1563,75 @@
   box-shadow: 0 -50px 100px rgba(6, 20, 27, 1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
+  justify-content: flex-start;
+  padding-top: 4.5rem;
+  padding-bottom: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
-/* ==================== EDUCATION VERTICAL NODE SPINE (IMAGE-MATCHED) ==================== */
+@media (max-width: 768px) {
+  .deck-card-education {
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    overflow: visible;
+  }
+}
+
+.edu-container {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.deck-card-education .editorial-section-header {
+  margin-bottom: 0.5rem;
+}
+
+.deck-card-education .editorial-section-title {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1.0;
+  padding-top: 0.12rem;
+}
+
+.deck-card-education .editorial-section-desc {
+  margin-top: 0.2rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.edu-nav-bar {
+  margin-bottom: 0.75rem !important;
+}
+
+.edu-ctrl-btn {
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+}
+
+/* ==================== EDUCATION VERTICAL NODE SPINE ==================== */
 .edu-timeline-container {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  padding-left: 2.75rem;
-  margin-top: 1rem;
+  gap: 0.75rem;
+  padding-left: 2.5rem;
+  margin-top: 0.5rem;
 }
 
-/* Continuous Vertical Spine Line matching user image reference */
+/* Continuous Vertical Spine Line */
 .edu-spine-line {
   position: absolute;
-  left: 1rem;
-  top: 1.75rem;
-  bottom: 1.75rem;
+  left: 0.875rem;
+  top: 1.25rem;
+  bottom: 1.25rem;
   width: 3px;
   background-color: #253745;
   transform: translateX(-50%);
@@ -1591,7 +1646,7 @@
   width: 100%;
   background: linear-gradient(180deg, #CCD0CF 0%, #4A5C6A 100%);
   border-radius: 9999px;
-  transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 0 10px rgba(204, 208, 207, 0.4);
 }
 
@@ -1618,30 +1673,45 @@
   position: relative;
   display: flex;
   align-items: center;
-  transition: all 0.4s ease;
+  cursor: pointer;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.edu-timeline-item.inactive {
+  opacity: 0.75;
+}
+
+.edu-timeline-item.inactive:hover {
+  opacity: 0.95;
+  transform: translateX(3px);
+}
+
+.edu-timeline-item.active {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Node Dot positioned directly on the continuous vertical spine line */
 .edu-spine-node {
   position: absolute;
-  left: -2.75rem;
+  left: -2.5rem;
   top: 50%;
-  transform: translate(calc(1rem - 50%), -50%);
-  width: 18px;
-  height: 18px;
+  transform: translate(calc(0.875rem - 50%), -50%);
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: #11212D;
-  border: 2.5px solid #4A5C6A;
+  border: 2px solid #4A5C6A;
   z-index: 2;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
 
 .edu-timeline-item.active .edu-spine-node {
   background-color: #CCD0CF;
   border-color: #FFFFFF;
-  box-shadow: 0 0 16px rgba(204, 208, 207, 0.9), 0 0 28px rgba(204, 208, 207, 0.4);
-  transform: translate(calc(1rem - 50%), -50%) scale(1.3);
+  box-shadow: 0 0 14px rgba(204, 208, 207, 0.9), 0 0 24px rgba(204, 208, 207, 0.4);
+  transform: translate(calc(0.875rem - 50%), -50%) scale(1.3);
   animation: nodeRipplePulse 2.5s infinite;
 }
 
@@ -1657,41 +1727,150 @@
   }
 }
 
-.edu-timeline-item.active .badge-pill {
-  animation: pillPulse 3s ease-in-out infinite alternate;
-}
-
-@keyframes pillPulse {
-  0% {
-    border-color: #4A5C6A;
-    box-shadow: 0 0 6px rgba(204, 208, 207, 0.2);
-  }
-  100% {
-    border-color: #CCD0CF;
-    box-shadow: 0 0 16px rgba(204, 208, 207, 0.5);
-  }
-}
-
 .edu-card-wrapper {
   width: 100%;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  animation: eduCardAscend 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes eduCardAscend {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.edu-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 0.875rem 1.25rem !important;
+  width: 100%;
+  border: 1px solid #253745 !important;
+  background-color: #0A0E13;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.edu-timeline-item.active .edu-card-wrapper .glass-card {
-  border-color: #4A5C6A;
-  box-shadow: 0 16px 40px rgba(6, 20, 27, 0.9), 0 0 25px rgba(204, 208, 207, 0.08);
+.edu-timeline-item.active .edu-card {
+  border-color: #4A5C6A !important;
+  background-color: #0E151E;
+  box-shadow: 0 12px 32px rgba(6, 20, 27, 0.85), 0 0 20px rgba(204, 208, 207, 0.08) !important;
+}
+
+.edu-card-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.edu-icon-box {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  background-color: #141C25;
+  border: 1px solid #283747;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.edu-icon-box .material-symbols-outlined {
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.edu-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.edu-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.edu-degree-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.edu-score-badge {
+  background-color: #141C25;
+  color: #CCD0CF;
+  border: 1px solid #283747;
+  font-size: 0.6875rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  letter-spacing: 0.04em;
+}
+
+.edu-institution-text {
+  color: #9BA8AB;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.edu-coursework-text {
+  color: #6C7B80;
+  font-size: 0.775rem;
+  line-height: 1.4;
+  margin: 2px 0 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.edu-timeline-item.active .edu-coursework-text {
+  color: #9BA8AB;
+}
+
+.edu-cohort-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  background-color: #11212D;
+  border: 1px solid #253745;
+  padding: 0.45rem 0.875rem;
+  border-radius: 0.625rem;
+  flex-shrink: 0;
+}
+
+.edu-cohort-label {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9BA8AB;
+}
+
+.edu-cohort-val {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #CCD0CF;
+}
+
+.edu-cohort-loc {
+  font-size: 0.6875rem;
+  color: #4A5C6A;
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 640px) {
+  .edu-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .edu-cohort-box {
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 }
 
 /* Page 8: Contact Deck */

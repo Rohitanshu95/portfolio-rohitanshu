@@ -59,7 +59,8 @@ export function useScrollStep(trackRef, totalSteps) {
   const jumpToStep = (targetIdx) => {
     if (!trackRef.current || totalSteps <= 1) return;
     const target = Math.max(0, Math.min(totalSteps - 1, targetIdx));
-    const sectionTop = trackRef.current.offsetTop;
+    const rect = trackRef.current.getBoundingClientRect();
+    const sectionTop = rect.top + window.scrollY;
     const totalScroll = trackRef.current.offsetHeight - window.innerHeight;
     const targetProgress = target / (totalSteps - 1);
     const targetY = sectionTop + targetProgress * totalScroll;
