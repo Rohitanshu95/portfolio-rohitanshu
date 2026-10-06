@@ -75,7 +75,7 @@ export default function Hero({ profile }) {
                 <span>linkedin.com/in/rohitanshu-dhar</span>
               </a>
 
-              <div className="badge badge-pill" style={{ color: '#ffffff', background: '#000000', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
+              <div className="badge badge-pill" style={{ color: '#CCD0CF', background: '#11212D', border: '1px solid #253745' }}>
                 <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>near_me</span>
                 <span>{profile?.location || 'Bhubaneswar, Odisha'}</span>
               </div>
@@ -91,7 +91,7 @@ export default function Hero({ profile }) {
                 width: '18rem',
                 height: '18rem',
                 borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(204, 208, 207, 0.12) 0%, transparent 70%)',
                 filter: 'blur(40px)',
                 pointerEvents: 'none'
               }}
@@ -110,25 +110,25 @@ export default function Hero({ profile }) {
 
             {/* Floating Badge 1: Top-Left (Python) */}
             <div className="floating-badge badge-pos-tl">
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ffffff' }}></span>
+              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#CCD0CF' }}></span>
               <span>Python 3.12</span>
             </div>
 
             {/* Floating Badge 2: Top-Right (FastAPI) */}
             <div className="floating-badge badge-pos-tr">
-              <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#ffffff' }}>bolt</span>
+              <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#CCD0CF' }}>bolt</span>
               <span>FastAPI Async</span>
             </div>
 
             {/* Floating Badge 3: Bottom-Left (LangGraph) */}
             <div className="floating-badge badge-pos-bl">
-              <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#ffffff' }}>account_tree</span>
+              <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#CCD0CF' }}>account_tree</span>
               <span>LangGraph Agents</span>
             </div>
 
             {/* Floating Badge 4: Bottom-Right (Vector RAG) */}
             <div className="floating-badge badge-pos-br">
-              <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#ffffff' }}>database</span>
+              <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#CCD0CF' }}>database</span>
               <span>Vector RAG</span>
             </div>
           </div>

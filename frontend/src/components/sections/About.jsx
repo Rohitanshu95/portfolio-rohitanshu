@@ -4,7 +4,7 @@ import SectionHeader from '../common/SectionHeader';
 export default function About({ profile }) {
   const bioParagraphs = profile?.aboutBio || [
     'AI Engineer with 1+ year of hands-on experience in Python, FastAPI, React, and Generative AI, building scalable AI apps with LLMs, RAG, vector databases, prompt engineering, and autonomous agents.',
-    'Currently pursuing B.Tech in Computer Science and Engineering from GIET, Bhubaneswar (2022–2026). My engineering philosophy centers on deterministic evaluation over vibecoding: systematically driving down hallucination rates, optimizing TTFT (Time to First Token), and implementing reliable multi-agent orchestration loops for mission-critical client workloads.'
+    'B.Tech in Computer Science and Engineering from GIET, Bhubaneswar (2022–2026, CGPA: 8.12). My engineering philosophy centers on deterministic evaluation over vibecoding: systematically driving down hallucination rates, optimizing TTFT (Time to First Token), and implementing reliable multi-agent orchestration loops for mission-critical client workloads.'
   ];
 
   const metrics = profile?.metrics || [
@@ -58,17 +58,17 @@ export default function About({ profile }) {
           </div>
 
           {/* Micro Metric Pill Bar */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', paddingTop: '1rem', borderTop: '1px solid rgba(255, 255, 255, 0.08)', fontSize: '0.75rem', fontFamily: 'var(--font-mono)' }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#a1a1aa' }}>
-              <span className="material-symbols-outlined" style={{ fontSize: '18px', color: '#ffffff' }}>verified</span>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', paddingTop: '1rem', borderTop: '1px solid #253745', fontSize: '0.75rem', fontFamily: 'var(--font-mono)' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#9BA8AB' }}>
+              <span className="material-symbols-outlined" style={{ fontSize: '18px', color: '#CCD0CF' }}>verified</span>
               <span>Low-Latency Serving</span>
             </span>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#a1a1aa' }}>
-              <span className="material-symbols-outlined" style={{ fontSize: '18px', color: '#ffffff' }}>analytics</span>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#9BA8AB' }}>
+              <span className="material-symbols-outlined" style={{ fontSize: '18px', color: '#CCD0CF' }}>analytics</span>
               <span>Deterministic Benchmarking</span>
             </span>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#a1a1aa' }}>
-              <span className="material-symbols-outlined" style={{ fontSize: '18px', color: '#ffffff' }}>hub</span>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#9BA8AB' }}>
+              <span className="material-symbols-outlined" style={{ fontSize: '18px', color: '#CCD0CF' }}>hub</span>
               <span>Multi-Agent Graph Workflows</span>
             </span>
           </div>
@@ -79,13 +79,13 @@ export default function About({ profile }) {
           {metrics.map((metric, idx) => (
             <div key={idx} className="bento-card">
               <div>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#a1a1aa', display: 'block' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#9BA8AB', display: 'block' }}>
                   {metric.title}
                 </span>
-                <span style={{ fontFamily: 'var(--font-headline)', fontSize: '2.25rem', fontWeight: 700, color: '#ffffff', display: 'block', lineHeight: 1.1, marginTop: '2px' }}>
+                <span style={{ fontFamily: 'var(--font-headline)', fontSize: '2.25rem', fontWeight: 700, color: '#CCD0CF', display: 'block', lineHeight: 1.1, marginTop: '2px' }}>
                   {metric.value}
                 </span>
-                <p style={{ fontSize: '0.8125rem', color: '#a1a1aa', marginTop: '4px' }}>
+                <p style={{ fontSize: '0.8125rem', color: '#9BA8AB', marginTop: '4px' }}>
                   {metric.description}
                 </p>
               </div>
@@ -95,12 +95,12 @@ export default function About({ profile }) {
                   width: '3rem',
                   height: '3rem',
                   borderRadius: '0.75rem',
-                  backgroundColor: '#27272a',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  backgroundColor: '#253745',
+                  border: '1px solid #4A5C6A',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#ffffff'
+                  color: '#CCD0CF'
                 }}
               >
                 <span className="material-symbols-outlined" style={{ fontSize: '26px' }}>{metric.icon}</span>

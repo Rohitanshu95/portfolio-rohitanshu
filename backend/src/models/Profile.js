@@ -47,14 +47,25 @@ const ProfileSchema = new mongoose.Schema({
   githubUrl: { type: String, default: 'https://github.com/Rohitanshu95' },
   linkedinUrl: { type: String, default: 'https://linkedin.com/in/rohitanshu-dhar' },
   resumeUrl: { type: String, default: '/resume.pdf' },
-  avatarUrl: { type: String, default: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDqoaGGAnziDEbngJ-LmfICvomHyTXXqiJgsif7Fl5AQV02w5pNfqzERGEosM86fHKYDtT0WZ6TrQOWKLCZcCBxMNXzOWSMax-CA3Khqj3h8RPnwr6e0nrwnOpdDcUpGM7w3zZxoDWlMXl1cyrPLrRJaTsHIJz8epNlARRoa0kQuUQCNWp2nkSNNqPDAHkgtwjDtvMu_OnDLjBA2ENfXtU9Yv5j0_HnQctHfYse7y8SToIu5IaK_UWCkg' },
+  avatarUrl: { type: String, default: '/profile.jpg' },
   education: {
     degree: { type: String, default: 'Bachelor of Technology (B.Tech) in Computer Science and Engineering' },
     institution: { type: String, default: 'GIET, Bhubaneswar (Affiliated to BPUT)' },
     cohort: { type: String, default: '2022 – 2026' },
     location: { type: String, default: 'Bhubaneswar, Odisha' },
+    score: { type: String, default: 'CGPA: 8.12' },
     coursework: { type: String, default: 'Core coursework: Artificial Intelligence, Distributed Systems, Data Structures & Algorithms, Machine Learning, Database Management Systems.' }
-  }
+  },
+  educationList: [
+    {
+      degree: { type: String },
+      institution: { type: String },
+      cohort: { type: String },
+      location: { type: String },
+      score: { type: String },
+      coursework: { type: String }
+    }
+  ]
 }, { timestamps: true });
 
 module.exports = mongoose.model('Profile', ProfileSchema);

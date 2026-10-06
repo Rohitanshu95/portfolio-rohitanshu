@@ -118,7 +118,7 @@ export default function WalkingCharacter({ onWalkComplete }) {
       {/* Tech Progress Status */}
       <div className="walker-status-box">
         <span className="walker-status-text">
-          <span className="material-symbols-outlined" style={{ fontSize: '18px', color: '#4cd7f6' }}>
+          <span className="material-symbols-outlined" style={{ fontSize: '18px', color: '#CCD0CF' }}>
             terminal
           </span>
           <span>Accessing Rohitanshu's Portfolio...</span>

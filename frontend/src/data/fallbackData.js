@@ -10,7 +10,7 @@ export const defaultProfile = {
   aboutHeading: 'Engineering Intelligence at Scale',
   aboutBio: [
     'AI Engineer with 1+ year of hands-on experience in Python, FastAPI, React, and Generative AI, building scalable AI apps with LLMs, RAG, vector databases, prompt engineering, and autonomous agents.',
-    'Currently pursuing B.Tech in Computer Science and Engineering from GIET, Bhubaneswar (2022–2026). My engineering philosophy centers on deterministic evaluation over vibecoding: systematically driving down hallucination rates, optimizing TTFT (Time to First Token), and implementing reliable multi-agent orchestration loops for mission-critical client workloads.'
+    'B.Tech in Computer Science and Engineering from GIET, Bhubaneswar (2022–2026, CGPA: 8.12). My engineering philosophy centers on deterministic evaluation over vibecoding: systematically driving down hallucination rates, optimizing TTFT (Time to First Token), and implementing reliable multi-agent orchestration loops for mission-critical client workloads.'
   ],
   microMetrics: [
     { label: 'Low-Latency Serving', icon: 'verified', color: 'secondary' },
@@ -27,14 +27,14 @@ export const defaultProfile = {
     },
     {
       title: 'Commercial Engagement',
-      value: '4',
+      value: '5',
       description: 'Internships & delivered client solutions',
       icon: 'work_history',
       color: 'secondary'
     },
     {
       title: 'Competitive Track Record',
-      value: '3',
+      value: '4',
       description: 'Hackathon podiums & fast prototyping',
       icon: 'emoji_events',
       color: 'tertiary'
@@ -59,8 +59,35 @@ export const defaultProfile = {
     institution: 'GIET, Bhubaneswar (Affiliated to BPUT)',
     cohort: '2022 – 2026',
     location: 'Bhubaneswar, Odisha',
+    score: 'CGPA: 8.12',
     coursework: 'Core coursework: Artificial Intelligence, Distributed Systems, Data Structures & Algorithms, Machine Learning, Database Management Systems.'
-  }
+  },
+  educationList: [
+    {
+      degree: 'Bachelor of Technology (B.Tech) in Computer Science and Engineering',
+      institution: 'GIET, Bhubaneswar (Affiliated to BPUT)',
+      cohort: '2022 – 2026',
+      location: 'Bhubaneswar, Odisha',
+      score: 'CGPA: 8.12',
+      coursework: 'Core coursework: Artificial Intelligence, Distributed Systems, Data Structures & Algorithms, Machine Learning, Database Management Systems.'
+    },
+    {
+      degree: 'Intermediate (Science)',
+      institution: 'JSRC, Balasore (CHSE, Odisha)',
+      cohort: '2020 – 2022',
+      location: 'Balasore, Odisha',
+      score: 'Percentage: 83%',
+      coursework: 'Physics, Chemistry, Mathematics, Information Technology & Science stream foundations.'
+    },
+    {
+      degree: 'Matriculation (10th Standard)',
+      institution: 'NGHS, Balasore (BSE Odisha)',
+      cohort: '2019 – 2020',
+      location: 'Balasore, Odisha',
+      score: 'Percentage: 88%',
+      coursework: 'General Sciences, Mathematics, Social Sciences & Regional Language curriculum.'
+    }
+  ]
 };
 
 export const defaultSkills = [
@@ -190,6 +217,18 @@ export const defaultExperiences = [
       'Engineered interactive Power BI and Excel dashboards, and authored a Python-based customer RFM segmentation model using Matplotlib.'
     ],
     techStack: ['Python', 'Power BI', 'Matplotlib', 'Data Segmentation', 'SQL']
+  },
+  {
+    role: 'Data Science Intern',
+    company: 'Dynamic Systems',
+    period: 'June 2024 – July 2024 • Internship',
+    nodeColor: 'primary',
+    companyColor: 'primary',
+    highlights: [
+      'Built a heart disease prediction model using machine learning.',
+      'Enhanced accuracy through preprocessing, feature selection, and model evaluation.'
+    ],
+    techStack: ['Python', 'Scikit-Learn', 'Machine Learning', 'Data Preprocessing', 'Model Evaluation']
   }
 ];
 
@@ -259,34 +298,34 @@ export const defaultProjects = [
 export const defaultAchievements = [
   {
     type: 'hackathon',
-    title: 'GIET HackFest 2025',
-    badge: '1st Place • Winner',
+    title: 'GIET HACKFEST 2025',
+    badge: '🥇 Winner (Inter-College)',
     badgeColor: 'secondary',
-    description: 'Championed first prize for best end-to-end production architecture.',
+    description: 'Championed 1st place in Inter-College Hackathon for best end-to-end production architecture.',
     icon: 'emoji_events'
   },
   {
     type: 'hackathon',
-    title: 'Festronix 2025',
-    badge: 'Runner-Up',
+    title: 'AI & ML Competition (Festronix 2025)',
+    badge: '🥈 Runner-Up',
     badgeColor: 'primary',
-    description: 'AI & ML Competition podium for low-latency neural pipeline.',
+    description: 'Secured runner-up in AI & ML Competition for low-latency neural pipeline.',
     icon: 'military_tech'
   },
   {
     type: 'hackathon',
-    title: 'Smart India Hackathon',
-    badge: '2nd Runner-Up',
+    title: 'Smart India Hackathon (Internal 2024-25)',
+    badge: '🥉 2nd Runner-Up',
     badgeColor: 'tertiary',
-    description: 'Internal selection (2024-25) for national-scale civic technology prototype.',
+    description: 'Internal selection (2024-25) podium for national-scale civic technology prototype.',
     icon: 'workspace_premium'
   },
   {
     type: 'hackathon',
-    title: 'Innovatex 4.0',
-    badge: 'Runner-Up',
+    title: 'InnovateX 4.0 Hackathon (GIET Baniatangi)',
+    badge: '🥈 Runner-Up',
     badgeColor: 'secondary',
-    description: 'GIET Baniatangi flagship hackathon for autonomous agent software.',
+    description: 'Podium finish in GIET Baniatangi flagship hackathon for autonomous software.',
     icon: 'rewarded_ads'
   },
   {

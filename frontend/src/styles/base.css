@@ -24,8 +24,8 @@ body {
 }
 
 ::selection {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #CCD0CF;
+  color: #06141B;
 }
 
 /* Material Symbols Outlined Default Styling */
@@ -77,7 +77,7 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, #e4e4e7 45%, #a1a1aa 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #CCD0CF 50%, #9BA8AB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -87,7 +87,7 @@ body {
 }
 
 .text-primary {
-  color: #ffffff;
+  color: #CCD0CF;
 }
 
 .text-tertiary {

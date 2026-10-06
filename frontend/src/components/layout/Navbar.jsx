@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   { label: 'Contact', href: '#contact' }
 ];
 
-export default function Navbar({ activeSection = 'about', profile }) {
+export default function Navbar({ activeSection = 'hero', profile }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleNavClick = (e, href) => {

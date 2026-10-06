@@ -24,12 +24,12 @@ export default function Achievements({ achievements = [] }) {
                   width: '3rem',
                   height: '3rem',
                   borderRadius: '0.75rem',
-                  backgroundColor: '#202024',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  backgroundColor: '#253745',
+                  border: '1px solid #4A5C6A',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#ffffff'
+                  color: '#CCD0CF'
                 }}
               >
                 <span className="material-symbols-outlined" style={{ fontSize: '28px', fontVariationSettings: "'FILL' 1" }}>
@@ -44,7 +44,7 @@ export default function Achievements({ achievements = [] }) {
                     fontSize: '0.6875rem',
                     textTransform: 'uppercase',
                     letterSpacing: '0.06em',
-                    color: '#a1a1aa',
+                    color: '#9BA8AB',
                     fontWeight: 600,
                     display: 'block'
                   }}
@@ -52,11 +52,11 @@ export default function Achievements({ achievements = [] }) {
                   {item.badge}
                 </span>
 
-                <h4 style={{ fontSize: '1.1875rem', fontWeight: 700, color: '#ffffff', marginTop: '4px' }}>
+                <h4 style={{ fontSize: '1.1875rem', fontWeight: 700, color: '#CCD0CF', marginTop: '4px' }}>
                   {item.title}
                 </h4>
 
-                <p style={{ fontSize: '0.8125rem', color: '#a1a1aa', marginTop: '4px', lineHeight: 1.5 }}>
+                <p style={{ fontSize: '0.8125rem', color: '#9BA8AB', marginTop: '4px', lineHeight: 1.5 }}>
                   {item.description}
                 </p>
               </div>
@@ -78,12 +78,12 @@ export default function Achievements({ achievements = [] }) {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem' }}>
-          <span className="material-symbols-outlined" style={{ fontSize: '28px', color: '#ffffff' }}>
+          <span className="material-symbols-outlined" style={{ fontSize: '28px', color: '#CCD0CF' }}>
             verified
           </span>
           <div>
-            <span style={{ fontSize: '1.125rem', fontWeight: 700, color: '#ffffff', display: 'block' }}>Professional Certifications</span>
-            <span style={{ fontSize: '0.8125rem', color: '#a1a1aa' }}>
+            <span style={{ fontSize: '1.125rem', fontWeight: 700, color: '#CCD0CF', display: 'block' }}>Professional Certifications</span>
+            <span style={{ fontSize: '0.8125rem', color: '#9BA8AB' }}>
               Validated domain competencies & algorithmic expertise
             </span>
           </div>
@@ -97,9 +97,9 @@ export default function Achievements({ achievements = [] }) {
               style={{
                 padding: '0.5rem 1rem',
                 borderRadius: '0.75rem',
-                backgroundColor: '#18181b',
-                border: '1px solid rgba(255, 255, 255, 0.12)',
-                color: '#ffffff',
+                backgroundColor: '#11212D',
+                border: '1px solid #253745',
+                color: '#CCD0CF',
                 fontSize: '0.8125rem'
               }}
             >
@@ -108,7 +108,7 @@ export default function Achievements({ achievements = [] }) {
                   width: '6px',
                   height: '6px',
                   borderRadius: '50%',
-                  background: '#ffffff'
+                  background: '#CCD0CF'
                 }}
               ></span>
               <span>{cert.title}</span>

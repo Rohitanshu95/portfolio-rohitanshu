@@ -14,18 +14,18 @@ export default function Footer({ profile }) {
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1.5rem' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', maxWidth: '30rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <span style={{ fontFamily: 'var(--font-headline)', fontSize: '1.25rem', fontWeight: 600, color: '#ffffff' }}>
+              <span style={{ fontFamily: 'var(--font-headline)', fontSize: '1.25rem', fontWeight: 600, color: '#CCD0CF' }}>
                 {profile?.name || 'Rohitanshu Dhar'}
               </span>
-              <span className="badge badge-pill" style={{ fontSize: '0.6875rem', background: '#18181b', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.12)' }}>
+              <span className="badge badge-pill" style={{ fontSize: '0.6875rem', background: '#11212D', color: '#CCD0CF', border: '1px solid #253745' }}>
                 v2.6.0
               </span>
             </div>
-            <p style={{ fontSize: '0.875rem', color: '#a1a1aa', lineHeight: 1.6 }}>
+            <p style={{ fontSize: '0.875rem', color: '#9BA8AB', lineHeight: 1.6 }}>
               Crafted for production-ready AI systems, scalable RAG architectures, and autonomous agent workflows.
             </p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', color: '#a1a1aa', fontSize: '0.75rem', fontFamily: 'var(--font-mono)' }}>
-              <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#ffffff' }}>location_on</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', color: '#9BA8AB', fontSize: '0.75rem', fontFamily: 'var(--font-mono)' }}>
+              <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#CCD0CF' }}>location_on</span>
               <span>{profile?.location || 'Bhubaneswar, Odisha, India'}</span>
             </div>
           </div>
@@ -62,12 +62,12 @@ export default function Footer({ profile }) {
           </div>
         </div>
 
-        <div style={{ height: '1px', width: '100%', background: 'rgba(255, 255, 255, 0.1)' }}></div>
+        <div style={{ height: '1px', width: '100%', background: '#253745' }}></div>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', color: '#a1a1aa', fontSize: '0.75rem', fontFamily: 'var(--font-mono)' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', color: '#9BA8AB', fontSize: '0.75rem', fontFamily: 'var(--font-mono)' }}>
           <p>© {currentYear} {profile?.name || 'Rohitanshu Dhar'}. Crafted for production-ready AI systems.</p>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-            <a href="#hero" onClick={scrollToTop} style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', color: '#ffffff' }}>
+            <a href="#hero" onClick={scrollToTop} style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', color: '#CCD0CF' }}>
               <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>arrow_upward</span>
               <span>Back to Top</span>
             </a>

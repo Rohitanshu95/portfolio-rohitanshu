@@ -1,43 +1,52 @@
 :root {
-  /* ==================== MONOCHROME CANVAS & SURFACES ==================== */
-  --bg-canvas: #09090b;
-  --surface: #09090b;
-  --surface-dim: #050507;
-  --surface-bright: #27272a;
-  --surface-lowest: #000000;
-  --surface-low: #111113;
-  --surface-container: #18181b;
-  --surface-high: #202024;
-  --surface-highest: #27272a;
-  --surface-variant: #27272a;
+  /* ==================== ARCTIC SLATE & MIDNIGHT STEEL PALETTE ==================== */
+  /* Palette: #06141B, #11212D, #253745, #4A5C6A, #9BA8AB, #CCD0CF */
+  --color-abyss: #06141B;        /* Deep Midnight Canvas */
+  --color-slate-dark: #11212D;   /* Dark Slate Cards & Surfaces */
+  --color-charcoal: #253745;     /* Steel Elevated Surfaces & Borders */
+  --color-slate-muted: #4A5C6A;  /* Muted Slate Accents & Outlines */
+  --color-silver-mist: #9BA8AB;  /* Silver Mist Secondary Typography */
+  --color-frost-white: #CCD0CF;  /* Frost White Primary Typography & Highlights */
 
-  /* ==================== BLACK & WHITE PALETTE ==================== */
-  --primary: #ffffff;
-  --primary-container: #27272a;
-  --on-primary: #000000;
-  --on-primary-container: #ffffff;
-  --primary-fixed: #f4f4f5;
+  /* ==================== CANVAS & SURFACES ==================== */
+  --bg-canvas: #06141B;
+  --surface: #11212D;
+  --surface-dim: #040E13;
+  --surface-bright: #253745;
+  --surface-lowest: #06141B;
+  --surface-low: #0B1922;
+  --surface-container: #11212D;
+  --surface-high: #253745;
+  --surface-highest: #4A5C6A;
+  --surface-variant: #253745;
 
-  --secondary: #e4e4e7;
-  --secondary-container: #27272a;
-  --on-secondary: #000000;
-  --on-secondary-container: #ffffff;
+  /* ==================== BRAND & ROLE TOKENS ==================== */
+  --primary: #CCD0CF;
+  --primary-container: #253745;
+  --on-primary: #06141B;
+  --on-primary-container: #CCD0CF;
+  --primary-fixed: #FFFFFF;
 
-  --tertiary: #d4d4d8;
-  --tertiary-container: #27272a;
-  --on-tertiary: #000000;
+  --secondary: #9BA8AB;
+  --secondary-container: #253745;
+  --on-secondary: #06141B;
+  --on-secondary-container: #CCD0CF;
 
-  /* Semantic State Colors (Monochrome Adjusted) */
-  --success: #f4f4f5;
-  --warning: #d4d4d8;
+  --tertiary: #4A5C6A;
+  --tertiary-container: #11212D;
+  --on-tertiary: #CCD0CF;
+
+  /* Semantic State Colors */
+  --success: #CCD0CF;
+  --warning: #9BA8AB;
   --error: #fca5a5;
   --on-error: #450a0a;
 
   /* ==================== TEXT & TYPOGRAPHY COLORS ==================== */
-  --on-surface: #ffffff;
-  --on-surface-variant: #a1a1aa;
-  --outline: #71717a;
-  --outline-variant: #3f3f46;
+  --on-surface: #CCD0CF;
+  --on-surface-variant: #9BA8AB;
+  --outline: #4A5C6A;
+  --outline-variant: #253745;
 
   /* Typography Families */
   --font-headline: 'Space Grotesk', -apple-system, sans-serif;
@@ -64,18 +73,18 @@
   --radius-xl: 1.5rem;
   --radius-full: 9999px;
 
-  /* Shadows & Ambient Monochrome Glows */
-  --glow-primary: 0 0 24px -4px rgba(255, 255, 255, 0.25);
-  --glow-secondary: 0 0 20px -2px rgba(255, 255, 255, 0.18);
-  --glow-tertiary: 0 0 20px -2px rgba(255, 255, 255, 0.12);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.6);
-  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.7);
-  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.85);
+  /* Shadows & Ambient Glows */
+  --glow-primary: 0 0 24px -4px rgba(204, 208, 207, 0.22);
+  --glow-secondary: 0 0 20px -2px rgba(155, 168, 171, 0.18);
+  --glow-tertiary: 0 0 20px -2px rgba(74, 92, 106, 0.25);
+  --shadow-sm: 0 1px 3px rgba(6, 20, 27, 0.6);
+  --shadow-md: 0 4px 14px rgba(6, 20, 27, 0.7);
+  --shadow-lg: 0 8px 30px rgba(6, 20, 27, 0.85);
 
   /* Hairline Borders */
-  --border-subtle: 1px solid rgba(255, 255, 255, 0.08);
-  --border-card: 1px solid rgba(255, 255, 255, 0.1);
-  --border-card-hover: 1px solid rgba(255, 255, 255, 0.35);
+  --border-subtle: 1px solid #253745;
+  --border-card: 1px solid #253745;
+  --border-card-hover: 1px solid #4A5C6A;
 
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);

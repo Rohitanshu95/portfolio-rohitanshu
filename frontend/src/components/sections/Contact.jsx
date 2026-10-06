@@ -62,26 +62,26 @@ export default function Contact({ profile }) {
                   width: '3rem',
                   height: '3rem',
                   borderRadius: '0.75rem',
-                  backgroundColor: '#202024',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  backgroundColor: '#253745',
+                  border: '1px solid #4A5C6A',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#ffffff'
+                  color: '#CCD0CF'
                 }}
               >
                 <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>mail</span>
               </div>
               <div>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#a1a1aa', display: 'block' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#9BA8AB', display: 'block' }}>
                   Email Directly
                 </span>
-                <span style={{ fontSize: '1rem', fontWeight: 600, color: '#ffffff' }}>
+                <span style={{ fontSize: '1rem', fontWeight: 600, color: '#CCD0CF' }}>
                   {profile?.email || 'rohitanshudhar07@gmail.com'}
                 </span>
               </div>
             </div>
-            <span className="material-symbols-outlined" style={{ fontSize: '20px', color: '#a1a1aa' }}>
+            <span className="material-symbols-outlined" style={{ fontSize: '20px', color: '#9BA8AB' }}>
               arrow_forward
             </span>
           </a>
@@ -98,26 +98,26 @@ export default function Contact({ profile }) {
                   width: '3rem',
                   height: '3rem',
                   borderRadius: '0.75rem',
-                  backgroundColor: '#202024',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  backgroundColor: '#253745',
+                  border: '1px solid #4A5C6A',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#ffffff'
+                  color: '#CCD0CF'
                 }}
               >
                 <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>call</span>
               </div>
               <div>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#a1a1aa', display: 'block' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#9BA8AB', display: 'block' }}>
                   Direct Phone
                 </span>
-                <span style={{ fontSize: '1rem', fontWeight: 600, color: '#ffffff' }}>
+                <span style={{ fontSize: '1rem', fontWeight: 600, color: '#CCD0CF' }}>
                   {profile?.phone || '+91 8144598272'}
                 </span>
               </div>
             </div>
-            <span className="material-symbols-outlined" style={{ fontSize: '20px', color: '#a1a1aa' }}>
+            <span className="material-symbols-outlined" style={{ fontSize: '20px', color: '#9BA8AB' }}>
               arrow_forward
             </span>
           </a>
@@ -132,21 +132,21 @@ export default function Contact({ profile }) {
                 width: '3rem',
                 height: '3rem',
                 borderRadius: '0.75rem',
-                backgroundColor: '#202024',
-                border: '1px solid rgba(255, 255, 255, 0.12)',
+                backgroundColor: '#253745',
+                border: '1px solid #4A5C6A',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#ffffff'
+                color: '#CCD0CF'
               }}
             >
               <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>location_on</span>
             </div>
             <div>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#a1a1aa', display: 'block' }}>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#9BA8AB', display: 'block' }}>
                 Current Location
               </span>
-              <span style={{ fontSize: '1rem', color: '#ffffff' }}>
+              <span style={{ fontSize: '1rem', color: '#CCD0CF' }}>
                 {profile?.location || 'Bhubaneswar, Odisha, India'}
               </span>
             </div>
@@ -185,16 +185,16 @@ export default function Contact({ profile }) {
                 style={{
                   padding: '1rem',
                   borderRadius: 'var(--radius-sm)',
-                  backgroundColor: '#18181b',
-                  border: '1px solid rgba(255, 255, 255, 0.35)',
-                  color: '#ffffff',
+                  backgroundColor: '#11212D',
+                  border: '1px solid #4A5C6A',
+                  color: '#CCD0CF',
                   fontSize: '0.875rem',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.5rem'
                 }}
               >
-                <span className="material-symbols-outlined" style={{ color: '#ffffff' }}>check_circle</span>
+                <span className="material-symbols-outlined" style={{ color: '#CCD0CF' }}>check_circle</span>
                 <span>{statusMessage}</span>
               </div>
             )}
@@ -204,16 +204,16 @@ export default function Contact({ profile }) {
                 style={{
                   padding: '1rem',
                   borderRadius: 'var(--radius-sm)',
-                  backgroundColor: '#18181b',
-                  border: '1px solid rgba(255, 255, 255, 0.35)',
-                  color: '#ffffff',
+                  backgroundColor: '#11212D',
+                  border: '1px solid #4A5C6A',
+                  color: '#CCD0CF',
                   fontSize: '0.875rem',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.5rem'
                 }}
               >
-                <span className="material-symbols-outlined" style={{ color: '#ffffff' }}>error</span>
+                <span className="material-symbols-outlined" style={{ color: '#CCD0CF' }}>error</span>
                 <span>{errorMessage}</span>
               </div>
             )}
