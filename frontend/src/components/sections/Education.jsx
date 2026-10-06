@@ -168,34 +168,35 @@ export default function Education({ profile }) {
                             width: '3.25rem',
                             height: '3.25rem',
                             borderRadius: '0.875rem',
-                            backgroundColor: '#253745',
-                            border: '1px solid #4A5C6A',
+                            backgroundColor: '#141C25',
+                            border: '1px solid #283747',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            color: '#CCD0CF',
+                            color: '#FFFFFF',
                             flexShrink: 0,
                             marginTop: '2px'
                           }}
                         >
-                          <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>
+                          <span className="material-symbols-outlined" style={{ fontSize: '28px', color: '#FFFFFF' }}>
                             {edu.icon || (idx === 0 ? 'school' : idx === 1 ? 'science' : 'history_edu')}
                           </span>
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', flexWrap: 'wrap' }}>
-                            <h4 style={{ fontSize: '1.1875rem', fontWeight: 700, color: '#CCD0CF' }}>
+                            <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.01em' }}>
                               {edu.degree}
                             </h4>
                             {edu.score && (
                               <span
                                 className="badge badge-pill"
                                 style={{
-                                  backgroundColor: '#253745',
-                                  color: '#CCD0CF',
-                                  border: '1px solid #4A5C6A',
-                                  fontSize: '0.6875rem'
+                                  backgroundColor: '#141C25',
+                                  color: '#FFFFFF',
+                                  border: '1px solid #283747',
+                                  fontSize: '0.6875rem',
+                                  letterSpacing: '0.06em'
                                 }}
                               >
                                 {edu.score}

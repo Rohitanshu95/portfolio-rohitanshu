@@ -12,6 +12,8 @@ const NEXT_MAP = {
 };
 
 export default function NextPageIndicator({ activeSection = 'hero' }) {
+  if (activeSection === 'hero') return null;
+
   const currentKey = activeSection || 'hero';
   const target = NEXT_MAP[currentKey] || NEXT_MAP.hero;
 

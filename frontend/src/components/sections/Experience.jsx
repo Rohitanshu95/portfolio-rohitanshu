@@ -53,7 +53,7 @@ export default function Experience({ experiences = [] }) {
           {/* Stepper Navigation Bar */}
           <div className="exp-nav-bar">
             <div className="exp-progress-counter">
-              <span style={{ color: '#CCD0CF', fontWeight: 600 }}>
+              <span style={{ color: '#FFFFFF', fontWeight: 700 }}>
                 Role {String(currentIndex + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
               </span>
               <div className="exp-dots-indicator">
@@ -76,7 +76,7 @@ export default function Experience({ experiences = [] }) {
                 aria-label="Previous Experience"
                 title="Previous Role"
               >
-                <span className="material-symbols-outlined" style={{ fontSize: '20px', color: '#CCD0CF' }}>arrow_back</span>
+                <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>arrow_back</span>
               </button>
               <button
                 onClick={goToNext}
@@ -85,7 +85,7 @@ export default function Experience({ experiences = [] }) {
                 aria-label="Next Experience"
                 title="Next Role"
               >
-                <span className="material-symbols-outlined" style={{ fontSize: '20px', color: '#CCD0CF' }}>arrow_forward</span>
+                <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>arrow_forward</span>
               </button>
             </div>
           </div>
@@ -112,30 +112,31 @@ export default function Experience({ experiences = [] }) {
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'space-between',
-                      padding: '2rem'
+                      padding: '2.25rem'
                     }}
                   >
                     {/* Top Bar: Role & Period */}
                     <div>
                       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '0.75rem' }}>
                         <div>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '4px' }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '6px' }}>
                             <span
                               className="badge badge-pill"
                               style={{
-                                backgroundColor: '#253745',
-                                color: '#CCD0CF',
-                                border: '1px solid #4A5C6A',
-                                fontSize: '0.6875rem'
+                                backgroundColor: '#141C25',
+                                color: '#FFFFFF',
+                                border: '1px solid #283747',
+                                fontSize: '0.6875rem',
+                                letterSpacing: '0.08em'
                               }}
                             >
                               ROLE {String(idx + 1).padStart(2, '0')}
                             </span>
                           </div>
-                          <h4 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#CCD0CF' }}>
+                          <h4 style={{ fontSize: '1.625rem', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.02em' }}>
                             {exp.role}
                           </h4>
-                          <p style={{ color: '#9BA8AB', fontSize: '1rem', marginTop: '2px' }}>
+                          <p style={{ color: '#9BA8AB', fontSize: '1rem', marginTop: '2px', fontWeight: 500 }}>
                             {exp.company}
                           </p>
                         </div>
@@ -143,11 +144,11 @@ export default function Experience({ experiences = [] }) {
                         <span
                           className="badge badge-pill"
                           style={{
-                            backgroundColor: '#11212D',
-                            color: '#CCD0CF',
-                            border: '1px solid #253745',
+                            backgroundColor: '#0E141C',
+                            color: '#FFFFFF',
+                            border: '1px solid #1E2835',
                             fontSize: '0.8125rem',
-                            padding: '0.4rem 0.875rem'
+                            padding: '0.45rem 1rem'
                           }}
                         >
                           {exp.period}
@@ -162,9 +163,9 @@ export default function Experience({ experiences = [] }) {
                           display: 'flex',
                           flexDirection: 'column',
                           gap: '0.625rem',
-                          color: '#9BA8AB',
+                          color: '#CBD5E1',
                           fontSize: '0.9375rem',
-                          lineHeight: 1.6
+                          lineHeight: 1.65
                         }}
                       >
                         {exp.highlights?.map((point, pIdx) => (
@@ -174,7 +175,7 @@ export default function Experience({ experiences = [] }) {
                     </div>
 
                     {/* Bottom: Tech Stack Pills & Swipe Instruction */}
-                    <div style={{ paddingTop: '1.5rem', borderTop: '1px solid #253745', marginTop: '1.25rem' }}>
+                    <div style={{ paddingTop: '1.5rem', borderTop: '1px solid #1E2835', marginTop: '1.25rem' }}>
                       {exp.techStack && exp.techStack.length > 0 && (
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '0.75rem' }}>
                           {exp.techStack.map((tech, tIdx) => (

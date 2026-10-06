@@ -22,29 +22,29 @@ export default function Skills({ skills = [] }) {
             >
               {/* Category Header */}
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <span
                     className="material-symbols-outlined"
                     style={{
                       fontSize: '24px',
-                      color: '#CCD0CF'
+                      color: '#FFFFFF'
                     }}
                   >
                     {cat.icon || 'code'}
                   </span>
-                  <h4 style={{ fontSize: '1.1875rem', fontWeight: 600, color: '#CCD0CF' }}>{cat.category}</h4>
+                  <h4 style={{ fontSize: '1.1875rem', fontWeight: 700, color: '#FFFFFF' }}>{cat.category}</h4>
                 </div>
 
                 {cat.specializationTag && (
                   <span
                     className="badge"
                     style={{
-                      backgroundColor: '#253745',
-                      color: '#CCD0CF',
-                      border: '1px solid #4A5C6A',
+                      backgroundColor: '#121A23',
+                      color: '#FFFFFF',
+                      border: '1px solid #283747',
                       fontSize: '0.625rem',
                       textTransform: 'uppercase',
-                      letterSpacing: '0.06em'
+                      letterSpacing: '0.08em'
                     }}
                   >
                     {cat.specializationTag}

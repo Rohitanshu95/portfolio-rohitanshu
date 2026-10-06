@@ -54,34 +54,34 @@ export default function Contact({ profile }) {
           <a
             href={`mailto:${profile?.email || 'rohitanshudhar07@gmail.com'}`}
             className="glass-card"
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.25rem' }}
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.5rem' }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
               <div
                 style={{
-                  width: '3rem',
-                  height: '3rem',
+                  width: '3.25rem',
+                  height: '3.25rem',
                   borderRadius: '0.75rem',
-                  backgroundColor: '#253745',
-                  border: '1px solid #4A5C6A',
+                  backgroundColor: '#141C25',
+                  border: '1px solid #283747',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#CCD0CF'
+                  color: '#FFFFFF'
                 }}
               >
-                <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>mail</span>
+                <span className="material-symbols-outlined" style={{ fontSize: '24px', color: '#FFFFFF' }}>mail</span>
               </div>
               <div>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#9BA8AB', display: 'block' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#9BA8AB', display: 'block' }}>
                   Email Directly
                 </span>
-                <span style={{ fontSize: '1rem', fontWeight: 600, color: '#CCD0CF' }}>
+                <span style={{ fontSize: '1.0625rem', fontWeight: 700, color: '#FFFFFF' }}>
                   {profile?.email || 'rohitanshudhar07@gmail.com'}
                 </span>
               </div>
             </div>
-            <span className="material-symbols-outlined" style={{ fontSize: '20px', color: '#9BA8AB' }}>
+            <span className="material-symbols-outlined" style={{ fontSize: '22px', color: '#FFFFFF' }}>
               arrow_forward
             </span>
           </a>
@@ -90,34 +90,34 @@ export default function Contact({ profile }) {
           <a
             href={`tel:${profile?.phone || '+918144598272'}`}
             className="glass-card"
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.25rem' }}
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.5rem' }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
               <div
                 style={{
-                  width: '3rem',
-                  height: '3rem',
+                  width: '3.25rem',
+                  height: '3.25rem',
                   borderRadius: '0.75rem',
-                  backgroundColor: '#253745',
-                  border: '1px solid #4A5C6A',
+                  backgroundColor: '#141C25',
+                  border: '1px solid #283747',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#CCD0CF'
+                  color: '#FFFFFF'
                 }}
               >
-                <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>call</span>
+                <span className="material-symbols-outlined" style={{ fontSize: '24px', color: '#FFFFFF' }}>call</span>
               </div>
               <div>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#9BA8AB', display: 'block' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#9BA8AB', display: 'block' }}>
                   Direct Phone
                 </span>
-                <span style={{ fontSize: '1rem', fontWeight: 600, color: '#CCD0CF' }}>
+                <span style={{ fontSize: '1.0625rem', fontWeight: 700, color: '#FFFFFF' }}>
                   {profile?.phone || '+91 8144598272'}
                 </span>
               </div>
             </div>
-            <span className="material-symbols-outlined" style={{ fontSize: '20px', color: '#9BA8AB' }}>
+            <span className="material-symbols-outlined" style={{ fontSize: '22px', color: '#FFFFFF' }}>
               arrow_forward
             </span>
           </a>
@@ -125,28 +125,28 @@ export default function Contact({ profile }) {
           {/* Location Card */}
           <div
             className="glass-card"
-            style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.25rem' }}
+            style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', padding: '1.5rem' }}
           >
             <div
               style={{
-                width: '3rem',
-                height: '3rem',
+                width: '3.25rem',
+                height: '3.25rem',
                 borderRadius: '0.75rem',
-                backgroundColor: '#253745',
-                border: '1px solid #4A5C6A',
+                backgroundColor: '#141C25',
+                border: '1px solid #283747',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#CCD0CF'
+                color: '#FFFFFF'
               }}
             >
-              <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>location_on</span>
+              <span className="material-symbols-outlined" style={{ fontSize: '24px', color: '#FFFFFF' }}>location_on</span>
             </div>
             <div>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#9BA8AB', display: 'block' }}>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#9BA8AB', display: 'block' }}>
                 Current Location
               </span>
-              <span style={{ fontSize: '1rem', color: '#CCD0CF' }}>
+              <span style={{ fontSize: '1.0625rem', fontWeight: 700, color: '#FFFFFF' }}>
                 {profile?.location || 'Bhubaneswar, Odisha, India'}
               </span>
             </div>

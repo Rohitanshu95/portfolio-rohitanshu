@@ -118,15 +118,16 @@ export default function Projects({ projects = [] }) {
                       {/* Top Content */}
                       <div>
                         {/* Category Header */}
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem' }}>
                             <span
                               className="badge badge-pill"
                               style={{
-                                color: '#CCD0CF',
-                                backgroundColor: '#253745',
-                                border: '1px solid #4A5C6A',
-                                fontSize: '0.6875rem'
+                                color: '#FFFFFF',
+                                backgroundColor: '#141C25',
+                                border: '1px solid #283747',
+                                fontSize: '0.6875rem',
+                                letterSpacing: '0.08em'
                               }}
                             >
                               BUILD {String(idx + 1).padStart(2, '0')}
@@ -134,10 +135,11 @@ export default function Projects({ projects = [] }) {
                             <span
                               className="badge badge-pill"
                               style={{
-                                color: '#CCD0CF',
-                                backgroundColor: '#11212D',
-                                border: '1px solid #253745',
-                                fontSize: '0.6875rem'
+                                color: '#FFFFFF',
+                                backgroundColor: '#0E141C',
+                                border: '1px solid #1E2835',
+                                fontSize: '0.6875rem',
+                                letterSpacing: '0.06em'
                               }}
                             >
                               {proj.categoryBadge}
@@ -149,12 +151,12 @@ export default function Projects({ projects = [] }) {
                               width: '2.5rem',
                               height: '2.5rem',
                               borderRadius: '0.625rem',
-                              backgroundColor: '#253745',
-                              border: '1px solid #4A5C6A',
+                              backgroundColor: '#141C25',
+                              border: '1px solid #283747',
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
-                              color: '#CCD0CF'
+                              color: '#FFFFFF'
                             }}
                           >
                             <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>
@@ -164,27 +166,29 @@ export default function Projects({ projects = [] }) {
                         </div>
 
                         {/* Project Title */}
-                        <h4 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#CCD0CF', marginBottom: '0.5rem' }}>
+                        <h4 style={{ fontSize: '1.625rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '0.625rem', letterSpacing: '-0.02em' }}>
                           {proj.title}
                         </h4>
 
                         {/* Description */}
-                        <p style={{ fontSize: '0.9375rem', color: '#9BA8AB', lineHeight: 1.6, maxWidth: '52rem' }}>
+                        <p style={{ fontSize: '0.9375rem', color: '#9BA8AB', lineHeight: 1.7, maxWidth: '52rem' }}>
                           {proj.description}
                         </p>
 
                         {/* Tech Stack Pills */}
                         {proj.tags && proj.tags.length > 0 && (
-                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.375rem', marginTop: '1.25rem' }}>
+                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginTop: '1.5rem' }}>
                             {proj.tags.map((tag, tIdx) => (
                               <span
                                 key={tIdx}
                                 className="badge"
                                 style={{
-                                  backgroundColor: '#11212D',
-                                  color: '#CCD0CF',
-                                  border: '1px solid #253745',
-                                  fontSize: '0.75rem'
+                                  backgroundColor: '#0E141C',
+                                  color: '#E2E8F0',
+                                  border: '1px solid #1E2835',
+                                  fontSize: '0.75rem',
+                                  borderRadius: '9999px',
+                                  padding: '0.35rem 0.75rem'
                                 }}
                               >
                                 {tag}
@@ -197,9 +201,9 @@ export default function Projects({ projects = [] }) {
                       {/* Bottom: Action Buttons & Navigation Cue */}
                       <div
                         style={{
-                          paddingTop: '1.25rem',
-                          borderTop: '1px solid #253745',
-                          marginTop: '1.25rem',
+                          paddingTop: '1.5rem',
+                          borderTop: '1px solid #1E2835',
+                          marginTop: '1.5rem',
                           display: 'flex',
                           flexWrap: 'wrap',
                           alignItems: 'center',
@@ -231,7 +235,7 @@ export default function Projects({ projects = [] }) {
                           {currentIndex < total - 1 ? (
                             <span
                               onClick={goToNext}
-                              style={{ cursor: 'pointer', color: '#CCD0CF', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+                              style={{ cursor: 'pointer', color: '#FFFFFF', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
                             >
                               <span>Next System</span>
                               <span className="material-symbols-outlined" style={{ fontSize: '14px' }}>arrow_forward</span>
@@ -239,7 +243,7 @@ export default function Projects({ projects = [] }) {
                           ) : (
                             <a
                               href="#achievements"
-                              style={{ color: '#CCD0CF', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+                              style={{ color: '#FFFFFF', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
                             >
                               <span>Proceed to Honors & Hackathons</span>
                               <span className="material-symbols-outlined" style={{ fontSize: '14px' }}>arrow_downward</span>

@@ -1,97 +1,81 @@
 import React from 'react';
 
 export default function Hero({ profile }) {
-  const avatarUrl = profile?.avatarUrl && !profile.avatarUrl.includes('googleusercontent') 
-    ? profile.avatarUrl 
-    : '/profile.jpg';
+  const handleScrollDown = (e) => {
+    e.preventDefault();
+    const aboutElem = document.querySelector('#about');
+    if (aboutElem) {
+      aboutElem.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const fullNameUpper = (profile?.name || 'Rohitanshu Dhar').toUpperCase();
 
   return (
-    <section className="hero-page-screen hero-section" id="hero">
-      {/* Ambient Radial Glows */}
-      <div className="ambient-glow-wrapper">
-        <div className="glow-orb glow-orb-primary" style={{ top: '-8rem', left: '20%' }}></div>
-        <div className="glow-orb glow-orb-secondary" style={{ top: '12rem', right: '5%' }}></div>
-      </div>
+    <section className="editorial-hero-section" id="hero">
+      {/* Subtle Geometric Background Rings */}
+      <svg 
+        className="editorial-hero-bg-lines" 
+        viewBox="0 0 1440 900" 
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        {/* Upper Left Arc */}
+        <circle cx="480" cy="180" r="320" stroke="rgba(24, 34, 45, 0.14)" strokeWidth="1.2" />
+        {/* Lower Right Arc */}
+        <circle cx="1120" cy="520" r="280" stroke="rgba(24, 34, 45, 0.12)" strokeWidth="1.2" />
+      </svg>
 
-      <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-        <div className="hero-grid">
-          {/* Left Column: Copy & Actions */}
-          <div className="hero-left">
-            {/* Live Status Pill */}
-            <div className="live-indicator">
-              <span className="pulsing-dot"></span>
-              <span>{profile?.statusBadge || 'Available for AI Engineering Roles'}</span>
+      {/* Main Container */}
+      <div className="editorial-hero-container">
+        {/* Left Side Role/Tagline */}
+        <div className="editorial-hero-left-tag">
+          <span className="editorial-tag-title">AI Developer</span>
+        </div>
+
+        {/* Continuous Right-to-Left Running Marquee Name (Beside & Behind Portrait) */}
+        <div className="editorial-hero-marquee-wrap" aria-hidden="true">
+          <div className="editorial-hero-marquee-inner">
+            <div className="editorial-hero-marquee-group">
+              <span>{fullNameUpper}</span>
+              <span className="marquee-divider">•</span>
+              <span>{fullNameUpper}</span>
+              <span className="marquee-divider">•</span>
+              <span>{fullNameUpper}</span>
+              <span className="marquee-divider">•</span>
             </div>
-
-            {/* Main Headline */}
-            <h1 className="hero-headline">
-              {profile?.headlinePrefix || "Hi, I'm"}{' '}
-              <span className="text-gradient">
-                {profile?.headlineHighlight || profile?.name || 'Rohitanshu Dhar'}
-              </span>
-            </h1>
-
-            {/* Subheadline */}
-            <h2 className="hero-subheadline">
-              {profile?.subheadline || 'AI Engineer building production-ready GenAI, RAG & AI agent applications'}
-            </h2>
-
-            {/* Bio Summary */}
-            <p className="hero-summary">
-              {profile?.summary || 'Specializing in context-aware retrieval pipelines, autonomous multi-agent systems, and low-latency LLM serving with deterministic benchmarks.'}
-            </p>
-
-            {/* Action Buttons */}
-            <div className="hero-btn-row">
-              <a href="#projects" className="btn btn-primary btn-icon-arrow">
-                <span>View Projects</span>
-                <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
-              </a>
-              <a href="#contact" className="btn btn-secondary">
-                <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>chat</span>
-                <span>Contact Me</span>
-              </a>
-            </div>
-
-            {/* Social & Activity Strip */}
-            <div className="hero-social-strip">
-              <a
-                href={profile?.githubUrl || 'https://github.com/Rohitanshu95'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-social-link"
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>code</span>
-                <span>github.com/Rohitanshu95</span>
-              </a>
-
-              <a
-                href={profile?.linkedinUrl || 'https://linkedin.com/in/rohitanshu-dhar'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-social-link"
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>share</span>
-                <span>linkedin.com/in/rohitanshu-dhar</span>
-              </a>
-
-              <div className="badge badge-pill" style={{ color: '#CCD0CF', background: '#11212D', border: '1px solid #253745' }}>
-                <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>near_me</span>
-                <span>{profile?.location || 'Bhubaneswar, Odisha'}</span>
-              </div>
+            <div className="editorial-hero-marquee-group" aria-hidden="true">
+              <span>{fullNameUpper}</span>
+              <span className="marquee-divider">•</span>
+              <span>{fullNameUpper}</span>
+              <span className="marquee-divider">•</span>
+              <span>{fullNameUpper}</span>
+              <span className="marquee-divider">•</span>
             </div>
           </div>
+        </div>
 
-          {/* Right Column: Transparent Cutout Photo */}
-          <div className="hero-right">
-            <div className="hero-unbounded-photo-wrapper">
-              <img
-                src="/profile-cutout.png"
-                alt={`${profile?.name || 'Rohitanshu Dhar'} - AI Engineer`}
-                className="hero-unbounded-photo"
-              />
-            </div>
-          </div>
+        {/* Center Foreground Portrait Cutout (Overlapping Giant Name) */}
+        <div className="editorial-hero-portrait-wrap">
+          <img
+            src="/profile-cutout.png"
+            alt={`${profile?.name || 'Rohitanshu Dhar'} - AI Engineer & Developer`}
+            className="editorial-hero-portrait-img"
+          />
+        </div>
+
+        {/* Right Side Scroll Indicator */}
+        <div className="editorial-hero-right-scroll">
+          <a 
+            href="#about" 
+            onClick={handleScrollDown} 
+            className="editorial-scroll-link"
+            aria-label="Scroll down to About section"
+          >
+            <span className="editorial-scroll-text">Scroll down</span>
+            <span className="editorial-scroll-arrow" aria-hidden="true">↓</span>
+          </a>
         </div>
       </div>
     </section>

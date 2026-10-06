@@ -18,21 +18,21 @@ export default function Achievements({ achievements = [] }) {
       <div className="achievements-grid" style={{ marginBottom: '1.5rem' }}>
         {hackathons.map((item, idx) => {
           return (
-            <div key={idx} className="glass-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '1rem' }}>
+            <div key={idx} className="glass-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '1.25rem' }}>
               <div
                 style={{
-                  width: '3rem',
-                  height: '3rem',
+                  width: '3.25rem',
+                  height: '3.25rem',
                   borderRadius: '0.75rem',
-                  backgroundColor: '#253745',
-                  border: '1px solid #4A5C6A',
+                  backgroundColor: '#141C25',
+                  border: '1px solid #283747',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#CCD0CF'
+                  color: '#FFFFFF'
                 }}
               >
-                <span className="material-symbols-outlined" style={{ fontSize: '28px', fontVariationSettings: "'FILL' 1" }}>
+                <span className="material-symbols-outlined" style={{ fontSize: '28px', fontVariationSettings: "'FILL' 1", color: '#FFFFFF' }}>
                   {item.icon || 'emoji_events'}
                 </span>
               </div>
@@ -43,7 +43,7 @@ export default function Achievements({ achievements = [] }) {
                     fontFamily: 'var(--font-mono)',
                     fontSize: '0.6875rem',
                     textTransform: 'uppercase',
-                    letterSpacing: '0.06em',
+                    letterSpacing: '0.08em',
                     color: '#9BA8AB',
                     fontWeight: 600,
                     display: 'block'
@@ -52,11 +52,11 @@ export default function Achievements({ achievements = [] }) {
                   {item.badge}
                 </span>
 
-                <h4 style={{ fontSize: '1.1875rem', fontWeight: 700, color: '#CCD0CF', marginTop: '4px' }}>
+                <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#FFFFFF', marginTop: '6px', letterSpacing: '-0.01em' }}>
                   {item.title}
                 </h4>
 
-                <p style={{ fontSize: '0.8125rem', color: '#9BA8AB', marginTop: '4px', lineHeight: 1.5 }}>
+                <p style={{ fontSize: '0.8125rem', color: '#9BA8AB', marginTop: '6px', lineHeight: 1.6 }}>
                   {item.description}
                 </p>
               </div>
@@ -73,18 +73,18 @@ export default function Achievements({ achievements = [] }) {
           flexWrap: 'wrap',
           alignItems: 'center',
           justifyContent: 'space-between',
-          gap: '1rem',
-          padding: '1.5rem'
+          gap: '1.25rem',
+          padding: '1.75rem'
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem' }}>
-          <span className="material-symbols-outlined" style={{ fontSize: '28px', color: '#CCD0CF' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <span className="material-symbols-outlined" style={{ fontSize: '32px', color: '#FFFFFF' }}>
             verified
           </span>
           <div>
-            <span style={{ fontSize: '1.125rem', fontWeight: 700, color: '#CCD0CF', display: 'block' }}>Professional Certifications</span>
+            <span style={{ fontSize: '1.1875rem', fontWeight: 800, color: '#FFFFFF', display: 'block' }}>Professional Certifications</span>
             <span style={{ fontSize: '0.8125rem', color: '#9BA8AB' }}>
-              Validated domain competencies & algorithmic expertise
+              Validated domain competencies & algorithmic engineering expertise
             </span>
           </div>
         </div>
@@ -93,13 +93,12 @@ export default function Achievements({ achievements = [] }) {
           {certifications.map((cert, cIdx) => (
             <div
               key={cIdx}
-              className="badge"
+              className="badge badge-pill"
               style={{
-                padding: '0.5rem 1rem',
-                borderRadius: '0.75rem',
-                backgroundColor: '#11212D',
-                border: '1px solid #253745',
-                color: '#CCD0CF',
+                padding: '0.55rem 1.15rem',
+                backgroundColor: '#141C25',
+                border: '1px solid #283747',
+                color: '#FFFFFF',
                 fontSize: '0.8125rem'
               }}
             >
@@ -108,6 +107,7 @@ export default function Achievements({ achievements = [] }) {
                   width: '6px',
                   height: '6px',
                   borderRadius: '50%',
+                  backgroundColor: '#FFFFFF',
                   background: '#CCD0CF'
                 }}
               ></span>

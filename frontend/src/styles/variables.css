@@ -49,6 +49,7 @@
   --outline-variant: #253745;
 
   /* Typography Families */
+  --font-display: 'Bebas Neue', 'Anton', sans-serif;
   --font-headline: 'Space Grotesk', -apple-system, sans-serif;
   --font-body: 'Inter', -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
