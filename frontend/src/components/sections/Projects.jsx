@@ -25,6 +25,7 @@ export default function Projects({ projects = [] }) {
   // Handle mobile touch swipes
   const handleTouchStart = (e) => {
     touchStartX.current = e.targetTouches[0].clientX;
+    touchEndX.current = e.targetTouches[0].clientX;
   };
 
   const handleTouchMove = (e) => {
@@ -32,12 +33,15 @@ export default function Projects({ projects = [] }) {
   };
 
   const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
     const swipeDistance = touchStartX.current - touchEndX.current;
-    if (swipeDistance > 50) {
+    if (swipeDistance > 45) {
       goToNext();
-    } else if (swipeDistance < -50) {
+    } else if (swipeDistance < -45) {
       goToPrev();
     }
+    touchStartX.current = 0;
+    touchEndX.current = 0;
   };
 
   return (

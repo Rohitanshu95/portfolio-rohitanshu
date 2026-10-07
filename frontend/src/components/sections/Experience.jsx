@@ -25,6 +25,7 @@ export default function Experience({ experiences = [] }) {
   // Handle touch swipes on mobile
   const handleTouchStart = (e) => {
     touchStartX.current = e.targetTouches[0].clientX;
+    touchEndX.current = e.targetTouches[0].clientX;
   };
 
   const handleTouchMove = (e) => {
@@ -32,12 +33,15 @@ export default function Experience({ experiences = [] }) {
   };
 
   const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
     const swipeDistance = touchStartX.current - touchEndX.current;
-    if (swipeDistance > 50) {
+    if (swipeDistance > 45) {
       goToNext();
-    } else if (swipeDistance < -50) {
+    } else if (swipeDistance < -45) {
       goToPrev();
     }
+    touchStartX.current = 0;
+    touchEndX.current = 0;
   };
 
   return (
@@ -105,16 +109,7 @@ export default function Experience({ experiences = [] }) {
             >
               {experiences.map((exp, idx) => (
                 <div key={idx} className={`exp-slide-card ${currentIndex === idx ? 'active' : ''}`}>
-                  <div
-                    className="glass-card"
-                    style={{
-                      minHeight: '22rem',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'space-between',
-                      padding: '2.25rem'
-                    }}
-                  >
+                  <div className="glass-card exp-slide-inner">
                     {/* Top Bar: Role & Period */}
                     <div>
                       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '0.75rem' }}>

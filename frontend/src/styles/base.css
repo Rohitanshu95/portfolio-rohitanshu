@@ -7,6 +7,8 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -21,6 +23,8 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 ::selection {
@@ -60,6 +64,13 @@ body {
   .container {
     padding-left: var(--gutter-sm);
     padding-right: var(--gutter-sm);
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 

@@ -67,6 +67,15 @@ export default function Navbar({ activeSection = 'hero', profile }) {
 
   return (
     <>
+      {/* Mobile Drawer Backdrop Overlay */}
+      {mobileOpen && (
+        <div
+          className="editorial-nav-mobile-backdrop"
+          onClick={() => setMobileOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
       {/* ================= TOP EDITORIAL NAVBAR (SQUEEZES OUT ON SCROLL) ================= */}
       <header className={`editorial-navbar-wrapper ${isScrolled && !mobileOpen ? 'nav-squeezed' : ''}`}>
         <div className="editorial-navbar-bar">
@@ -79,7 +88,8 @@ export default function Navbar({ activeSection = 'hero', profile }) {
           >
             <div className="editorial-nav-badge">RD</div>
             <span className="editorial-nav-brand-text">
-              DESIGN BY <strong>{displayName}</strong>
+              <span className="editorial-nav-brand-prefix">DESIGN BY </span>
+              <strong>{displayName}</strong>
             </span>
           </a>
 
@@ -104,7 +114,7 @@ export default function Navbar({ activeSection = 'hero', profile }) {
             })}
           </nav>
 
-          {/* Right CTA Button */}
+          {/* Right CTA Button & Hamburger */}
           <div className="editorial-nav-actions">
             <a
               href="#contact"
@@ -118,6 +128,7 @@ export default function Navbar({ activeSection = 'hero', profile }) {
               className="editorial-nav-mobile-toggle"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle Navigation Menu"
+              aria-expanded={mobileOpen}
             >
               <span className="material-symbols-outlined">
                 {mobileOpen ? 'close' : 'menu'}

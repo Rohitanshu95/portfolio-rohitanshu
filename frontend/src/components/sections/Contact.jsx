@@ -153,13 +153,13 @@ export default function Contact({ profile }) {
           </div>
 
           {/* Social Profiles Row */}
-          <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.25rem' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '0.25rem' }}>
             <a
               href={profile?.githubUrl || 'https://github.com/Rohitanshu95'}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-secondary"
-              style={{ flex: 1, padding: '0.75rem', fontSize: '0.8125rem' }}
+              style={{ flex: '1 1 140px', padding: '0.75rem 0.5rem', fontSize: '0.8125rem' }}
             >
               <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>terminal</span>
               <span>GitHub Profile</span>
@@ -169,7 +169,7 @@ export default function Contact({ profile }) {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-secondary"
-              style={{ flex: 1, padding: '0.75rem', fontSize: '0.8125rem' }}
+              style={{ flex: '1 1 140px', padding: '0.75rem 0.5rem', fontSize: '0.8125rem' }}
             >
               <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>hub</span>
               <span>LinkedIn Profile</span>

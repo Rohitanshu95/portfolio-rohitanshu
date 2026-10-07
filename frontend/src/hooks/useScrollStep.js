@@ -59,12 +59,20 @@ export function useScrollStep(trackRef, totalSteps) {
   const jumpToStep = (targetIdx) => {
     if (!trackRef.current || totalSteps <= 1) return;
     const target = Math.max(0, Math.min(totalSteps - 1, targetIdx));
+    const totalScroll = trackRef.current.offsetHeight - window.innerHeight;
+
+    // On mobile or when track is not taller than the viewport, transition directly
+    if (totalScroll <= 20) {
+      setCurrentStep(target);
+      return;
+    }
+
     const rect = trackRef.current.getBoundingClientRect();
     const sectionTop = rect.top + window.scrollY;
-    const totalScroll = trackRef.current.offsetHeight - window.innerHeight;
     const targetProgress = target / (totalSteps - 1);
     const targetY = sectionTop + targetProgress * totalScroll;
 
+    setCurrentStep(target);
     window.scrollTo({
       top: targetY,
       behavior: 'smooth'
