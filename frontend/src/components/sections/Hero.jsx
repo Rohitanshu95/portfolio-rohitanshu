@@ -1,8 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Hero({ profile }) {
   const [motionOn, setMotionOn] = useState(true);
   const [liveEffects, setLiveEffects] = useState(true);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const vh = window.innerHeight;
+      // Progress from 0 to 1 as user scrolls down 1 full viewport
+      const p = Math.min(Math.max(scrollY / (vh * 0.85), 0), 1);
+      setScrollProgress(p);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleScrollToWork = (e) => {
     e.preventDefault();
@@ -33,13 +48,32 @@ export default function Hero({ profile }) {
   const firstName = nameParts[0] || 'Rohitanshu';
   const lastName = nameParts.slice(1).join(' ') || 'Dhar';
 
-  return (
-    <section className={`sarthak-hero-root ${!motionOn ? 'motion-disabled' : ''} ${liveEffects ? 'live-effects-active' : ''}`} id="hero">
-      {/* Background Ambience / Subtle Lighting Glow */}
-      <div className="sarthak-hero-ambient" aria-hidden="true" />
+  // Opacity & scale of background photo as user scrolls down
+  const photoOpacity = Math.max(1 - scrollProgress * 1.25, 0);
+  const photoScale = 1 + scrollProgress * 0.08;
+  const photoTranslateY = scrollProgress * 30; // subtle parallax sink
 
-      {/* Main Full-Height Portrait Background Image */}
-      <div className="sarthak-hero-photo-wrap">
+  return (
+    <section 
+      className={`sarthak-hero-root ${!motionOn ? 'motion-disabled' : ''} ${liveEffects ? 'live-effects-active' : ''}`} 
+      id="hero"
+    >
+      {/* Background Ambience / Subtle Lighting Glow */}
+      <div 
+        className="sarthak-hero-ambient" 
+        style={{ opacity: Math.max(1 - scrollProgress * 1.5, 0) }}
+        aria-hidden="true" 
+      />
+
+      {/* Main Full-Height Portrait Background Image (Fades out seamlessly as you scroll down) */}
+      <div 
+        className="sarthak-hero-photo-wrap"
+        style={{
+          opacity: photoOpacity,
+          transform: `translate3d(0, ${photoTranslateY}px, 0) scale(${photoScale})`,
+          pointerEvents: photoOpacity <= 0.05 ? 'none' : 'auto'
+        }}
+      >
         <img
           src="/hero-portrait-blended.jpg"
           alt={fullName}
@@ -90,7 +124,10 @@ export default function Hero({ profile }) {
       </div>
 
       {/* Bottom Footer Controls Row */}
-      <div className="sarthak-hero-bottom-bar">
+      <div 
+        className="sarthak-hero-bottom-bar"
+        style={{ opacity: Math.max(1 - scrollProgress * 2, 0) }}
+      >
         {/* Left Side: Live Effects Toggle & Scroll to Discover */}
         <div className="sarthak-hero-bottom-left">
           <button
