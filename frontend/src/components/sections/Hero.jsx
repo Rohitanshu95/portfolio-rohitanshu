@@ -1,6 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Hero({ profile }) {
+  const [motionOn, setMotionOn] = useState(true);
+  const [liveEffects, setLiveEffects] = useState(true);
+
+  const handleScrollToWork = (e) => {
+    e.preventDefault();
+    const target = document.querySelector('#projects') || document.querySelector('#about');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleScrollToContact = (e) => {
+    e.preventDefault();
+    const target = document.querySelector('#contact');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleScrollDown = (e) => {
     e.preventDefault();
     const aboutElem = document.querySelector('#about');
@@ -9,73 +28,112 @@ export default function Hero({ profile }) {
     }
   };
 
-  const fullNameUpper = (profile?.name || 'Rohitanshu Dhar').toUpperCase();
+  const fullName = profile?.name || 'Rohitanshu Dhar';
+  const nameParts = fullName.split(' ');
+  const firstName = nameParts[0] || 'Rohitanshu';
+  const lastName = nameParts.slice(1).join(' ') || 'Dhar';
 
   return (
-    <section className="editorial-hero-section" id="hero">
-      {/* Subtle Geometric Background Rings */}
-      <svg 
-        className="editorial-hero-bg-lines" 
-        viewBox="0 0 1440 900" 
-        fill="none" 
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        {/* Upper Left Arc */}
-        <circle cx="480" cy="180" r="320" stroke="rgba(24, 34, 45, 0.14)" strokeWidth="1.2" />
-        {/* Lower Right Arc */}
-        <circle cx="1120" cy="520" r="280" stroke="rgba(24, 34, 45, 0.12)" strokeWidth="1.2" />
-      </svg>
+    <section className={`sarthak-hero-root ${!motionOn ? 'motion-disabled' : ''} ${liveEffects ? 'live-effects-active' : ''}`} id="hero">
+      {/* Background Ambience / Subtle Lighting Glow */}
+      <div className="sarthak-hero-ambient" aria-hidden="true" />
 
-      {/* Main Container */}
-      <div className="editorial-hero-container">
-        {/* Left Side Role/Tagline */}
-        <div className="editorial-hero-left-tag">
-          <span className="editorial-tag-title">AI Developer</span>
-        </div>
+      {/* Main Full-Height Portrait Background Image */}
+      <div className="sarthak-hero-photo-wrap">
+        <img
+          src="/hero-portrait-blended.jpg"
+          alt={fullName}
+          className="sarthak-hero-photo"
+        />
+        <div className="sarthak-hero-vignette" aria-hidden="true" />
+      </div>
 
-        {/* Continuous Right-to-Left Running Marquee Name (Beside & Behind Portrait) */}
-        <div className="editorial-hero-marquee-wrap" aria-hidden="true">
-          <div className="editorial-hero-marquee-inner">
-            <div className="editorial-hero-marquee-group">
-              <span>{fullNameUpper}</span>
-              <span className="marquee-divider">•</span>
-              <span>{fullNameUpper}</span>
-              <span className="marquee-divider">•</span>
-              <span>{fullNameUpper}</span>
-              <span className="marquee-divider">•</span>
-            </div>
-            <div className="editorial-hero-marquee-group" aria-hidden="true">
-              <span>{fullNameUpper}</span>
-              <span className="marquee-divider">•</span>
-              <span>{fullNameUpper}</span>
-              <span className="marquee-divider">•</span>
-              <span>{fullNameUpper}</span>
-              <span className="marquee-divider">•</span>
-            </div>
-          </div>
-        </div>
+      {/* Hero Content Canvas */}
+      <div className="sarthak-hero-content">
+        {/* Top Tagline */}
+        <p className="sarthak-hero-subhead">
+          AI &amp; AUTONOMOUS SYSTEMS ARCHITECTURE
+        </p>
 
-        {/* Center Foreground Portrait Cutout (Overlapping Giant Name) */}
-        <div className="editorial-hero-portrait-wrap">
-          <img
-            src="/profile-cutout.png"
-            alt={`${profile?.name || 'Rohitanshu Dhar'} - AI Engineer & Developer`}
-            className="editorial-hero-portrait-img"
-          />
-        </div>
+        {/* Big Signature Typography Name */}
+        <h1 className="sarthak-hero-name">
+          <span className="sarthak-name-first">{firstName}</span>
+          <span className="sarthak-name-last">{lastName}</span>
+        </h1>
 
-        {/* Right Side Scroll Indicator */}
-        <div className="editorial-hero-right-scroll">
-          <a 
-            href="#about" 
-            onClick={handleScrollDown} 
-            className="editorial-scroll-link"
-            aria-label="Scroll down to About section"
+        {/* Tailored Bio Pitch Statement */}
+        <p className="sarthak-hero-desc">
+          I build <strong>production AI systems</strong>, architect multi-agent workflows,<br className="sarthak-br-desktop" />
+          and scale intelligent applications.
+        </p>
+
+        {/* Main Action Buttons */}
+        <div className="sarthak-hero-actions">
+          <a
+            href="#projects"
+            onClick={handleScrollToWork}
+            className="sarthak-btn-pill"
           >
-            <span className="editorial-scroll-text">Scroll down</span>
-            <span className="editorial-scroll-arrow" aria-hidden="true">↓</span>
+            <span>Explore my work</span>
+            <span className="sarthak-btn-icon" aria-hidden="true">↓</span>
           </a>
+
+          <a
+            href="#contact"
+            onClick={handleScrollToContact}
+            className="sarthak-btn-underline"
+          >
+            <span>Start a conversation</span>
+            <span className="sarthak-btn-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      {/* Bottom Footer Controls Row */}
+      <div className="sarthak-hero-bottom-bar">
+        {/* Left Side: Live Effects Toggle & Scroll to Discover */}
+        <div className="sarthak-hero-bottom-left">
+          <button
+            type="button"
+            className={`sarthak-bottom-toggle-btn ${liveEffects ? 'active' : ''}`}
+            onClick={() => setLiveEffects(!liveEffects)}
+            aria-label="Toggle live effects"
+          >
+            <span>Enable live effects</span>
+          </button>
+
+          <a
+            href="#about"
+            onClick={handleScrollDown}
+            className="sarthak-scroll-discover"
+          >
+            <span className="sarthak-scroll-accent-bar" aria-hidden="true" />
+            <span className="sarthak-scroll-discover-text">SCROLL TO DISCOVER</span>
+            <span className="sarthak-scroll-discover-arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        {/* Right Side: Engineering & AI Meta + Motion Toggle */}
+        <div className="sarthak-hero-bottom-right">
+          <div className="sarthak-meta-text">
+            <span className="sarthak-meta-label">AI &amp; AGENT SYSTEMS</span>
+            <span className="sarthak-meta-value">SINCE 2022</span>
+          </div>
+
+          <button
+            type="button"
+            className={`sarthak-motion-toggle-btn ${motionOn ? 'active' : ''}`}
+            onClick={() => setMotionOn(!motionOn)}
+            aria-label="Toggle motion animation"
+          >
+            <span className="sarthak-motion-icon" aria-hidden="true">
+              {motionOn ? '⏸' : '▶'}
+            </span>
+            <span className="sarthak-motion-label">
+              {motionOn ? 'MOTION ON' : 'MOTION OFF'}
+            </span>
+            <span className="sarthak-sparkle-icon" aria-hidden="true">✦</span>
+          </button>
         </div>
       </div>
     </section>
