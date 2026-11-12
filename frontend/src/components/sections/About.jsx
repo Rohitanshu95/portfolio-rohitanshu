@@ -70,14 +70,14 @@ export default function About({ profile }) {
         <div className="about-grid editorial-about-subgrid">
           {/* Left Column: Technical Narrative & Micro-metrics */}
           <div className="glass-card editorial-about-glass-card">
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               {bioParagraphs.map((para, idx) => (
                 <p
                   key={idx}
                   style={{
-                    fontSize: idx === 0 ? '1.0625rem' : '0.9375rem',
-                    lineHeight: 1.7,
-                    color: idx === 0 ? '#CCD0CF' : '#9BA8AB'
+                    fontSize: idx === 0 ? '1.125rem' : '0.98rem',
+                    lineHeight: 1.8,
+                    color: idx === 0 ? 'var(--ink)' : 'var(--muted)'
                   }}
                 >
                   {para}
@@ -88,15 +88,15 @@ export default function About({ profile }) {
             {/* Micro Metric Pill Bar */}
             <div className="editorial-micro-pills">
               <span className="editorial-micro-pill">
-                <span className="material-symbols-outlined" style={{ fontSize: '18px', color: '#CCD0CF' }}>verified</span>
+                <span className="material-symbols-outlined" style={{ fontSize: '18px', color: 'var(--accent)' }}>verified</span>
                 <span>Low-Latency Serving</span>
               </span>
               <span className="editorial-micro-pill">
-                <span className="material-symbols-outlined" style={{ fontSize: '18px', color: '#CCD0CF' }}>analytics</span>
+                <span className="material-symbols-outlined" style={{ fontSize: '18px', color: 'var(--accent)' }}>analytics</span>
                 <span>Deterministic Benchmarking</span>
               </span>
               <span className="editorial-micro-pill">
-                <span className="material-symbols-outlined" style={{ fontSize: '18px', color: '#CCD0CF' }}>hub</span>
+                <span className="material-symbols-outlined" style={{ fontSize: '18px', color: 'var(--accent)' }}>hub</span>
                 <span>Multi-Agent Graph Workflows</span>
               </span>
             </div>
@@ -107,13 +107,13 @@ export default function About({ profile }) {
             {metrics.map((metric, idx) => (
               <div key={idx} className="bento-card">
                 <div>
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#9BA8AB', display: 'block' }}>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '1.2px', color: 'var(--muted)', display: 'block' }}>
                     {metric.title}
                   </span>
-                  <span style={{ fontFamily: 'var(--font-headline)', fontSize: '2.25rem', fontWeight: 700, color: '#CCD0CF', display: 'block', lineHeight: 1.1, marginTop: '2px' }}>
+                  <span style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '2.5rem', fontWeight: 400, color: 'var(--ink)', display: 'block', lineHeight: 1.1, marginTop: '2px' }}>
                     {metric.value}
                   </span>
-                  <p style={{ fontSize: '0.8125rem', color: '#9BA8AB', marginTop: '4px' }}>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--muted)', marginTop: '4px' }}>
                     {metric.description}
                   </p>
                 </div>
@@ -122,16 +122,16 @@ export default function About({ profile }) {
                   style={{
                     width: '3rem',
                     height: '3rem',
-                    borderRadius: '0.75rem',
-                    backgroundColor: '#16222F',
-                    border: '1px solid #2D3E4E',
+                    borderRadius: '12px',
+                    backgroundColor: 'rgba(238, 228, 215, 0.04)',
+                    border: '1px solid var(--line-subtle)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#CCD0CF'
+                    color: 'var(--accent)'
                   }}
                 >
-                  <span className="material-symbols-outlined" style={{ fontSize: '26px' }}>{metric.icon}</span>
+                  <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>{metric.icon}</span>
                 </div>
               </div>
             ))}
